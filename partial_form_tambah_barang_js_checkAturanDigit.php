@@ -27,7 +27,7 @@ function checkAturanDigit(kodeBarang) {
 
                     $container.addClass('alert-success');
                     $badge.removeClass('badge-warning badge-danger').addClass('badge-success').html('<i class="fas fa-check-circle"></i> DITEMUKAN');
-                    $title.text('Aturan Cocok untuk Prefix Kode (' + response.matched_kode + ')');
+                    $title.text('Label Spesifikasi untuk Kode (' + response.matched_kode + ')');
 
                     // Validasi teks keterangan agar tidak mencetak JSON mentah {"keterangan":""}
                     var teksKeterangan = response.keterangan || response.nama_kelompok;
@@ -35,7 +35,7 @@ function checkAturanDigit(kodeBarang) {
                         teksKeterangan = 'Kategori barang terdaftar (tanpa catatan khusus).';
                     }
 
-                    $content.html('<strong>Deskripsi Aturan:</strong> ' + teksKeterangan);
+                    $content.html('<strong>Deskripsi Label:</strong> ' + teksKeterangan);
 
                     // Update Label Parameter D6 - D15
                     if (response.raw_data) {
@@ -63,10 +63,11 @@ function checkAturanDigit(kodeBarang) {
                             
                             if (items.length > 0) {
                                 $.each(items, function (idx, item) {
-                                    html += '<option value="' + item.id + '" data-kode="' + item.kode + '">' + item.kode + ' - ' + item.nilai + '</option>';
+                                    const ket = item.keterangan || item.nilai;
+                                    html += `<option value="${item.id}" data-kode="${item.kode}" data-keterangan="${ket}">${item.kode} - ${item.nilai}</option>`;
                                 });
                             } else {
-                                html += '<option value="0" data-kode="0">0 - (Default / Kosong)</option>';
+                                html += '<option value="0" data-kode="0" data-keterangan="">0 - (Default / Kosong)</option>';
                             }
 
                             $select.html(html);
@@ -84,8 +85,8 @@ function checkAturanDigit(kodeBarang) {
                     activeMatchedKode = '';
                     $container.addClass('alert-warning');
                     $badge.removeClass('badge-success badge-danger').addClass('badge-warning text-dark').html('<i class="fas fa-exclamation-triangle"></i> TIDAK DITEMUKAN');
-                    $title.text('Tidak Ada Aturan Khusus Terdaftar');
-                    $content.html('<span class="text-muted">Kode ini tidak memiliki deskripsi aturan khusus di database.</span>');
+                    $title.text('Tidak Ada Label Spesifikasi Terdaftar');
+                    $content.html('<span class="text-muted">Kode ini tidak memiliki label spesifikasi di database.</span>');
                     
                     resetLabels();
                 }

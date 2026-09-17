@@ -2,7 +2,7 @@
 include('koneksi.php'); 
 
 $kelompok_utama = [
-    ['kode' => '1', 'keterangan' => 'PERLENGKAPAN UMUM/BHN BANGUNAN A'],
+    ['kode' => '1', 'keterangan' => 'PERLENGKAPAN UMUM/BHN BANGUNAN'],
     ['kode' => '2', 'keterangan' => 'ALAT LISTRIK'],
     ['kode' => '3', 'keterangan' => 'SUKU CADANG DAN PERLENGKAPAN MESIN'],
     ['kode' => '4', 'keterangan' => 'KEND. BERMOTOR (UMUM)'],
@@ -25,7 +25,6 @@ $data_sub_kelompok = [
     ['d1' => '1', 'd2' => 'Z', 'keterangan' => 'PERLENGKAPAN LAINNYA'],
 
     // --- D1 = 2 ---
-    ['d1' => '2', 'd2' => '0', 'keterangan' => 'KABEL, PANEL & KONTROL UTAMA'], // Added for orphan parent
     ['d1' => '2', 'd2' => '1', 'keterangan' => 'LIGHTING (LAMPU, LED, TL)'],
     ['d1' => '2', 'd2' => '2', 'keterangan' => 'FITTING'],
     ['d1' => '2', 'd2' => '3', 'keterangan' => 'KABEL & WIRE'],
@@ -46,7 +45,6 @@ $data_sub_kelompok = [
     ['d1' => '3', 'd2' => '6', 'keterangan' => 'VALVE & PIPING'],
     ['d1' => '3', 'd2' => '7', 'keterangan' => 'FILTER'],
     ['d1' => '3', 'd2' => '8', 'keterangan' => 'ELECTRICAL PART'],
-    ['d1' => '3', 'd2' => '9', 'keterangan' => 'SPAREPART MEKANIKAL LAINNYA'], // Added for orphan parent
     ['d1' => '3', 'd2' => 'Z', 'keterangan' => 'SUKU CADANG LAINNYA'],
 
     // --- D1 = 4 ---
@@ -69,8 +67,6 @@ $data_sub_kelompok = [
     ['d1' => '6', 'd2' => '3', 'keterangan' => 'BAHAN PELUMAS'],
     ['d1' => '6', 'd2' => '4', 'keterangan' => 'BAHAN OPERASI PABRIKASI'],
     ['d1' => '6', 'd2' => '5', 'keterangan' => 'BAHAN PEMBERSIH'],
-    ['d1' => '6', 'd2' => '6', 'keterangan' => 'LOGAM & PERLENGKAPAN LAS'], // Added for orphan parent
-    ['d1' => '6', 'd2' => '9', 'keterangan' => 'BAHAN KIMIA & OPERASI LAINNYA'], // Added for orphan parent
 
     // --- D1 = 7 ---
     ['d1' => '7', 'd2' => '1', 'keterangan' => 'BOILER'],
@@ -80,22 +76,27 @@ $data_sub_kelompok = [
     ['d1' => '7', 'd2' => '5', 'keterangan' => 'KOMPRESSOR'],
     ['d1' => '7', 'd2' => '6', 'keterangan' => 'GEARBOX'],
     ['d1' => '7', 'd2' => '7', 'keterangan' => 'TURBINE UAP'],
-    ['d1' => '7', 'd2' => '8', 'keterangan' => 'GENERATOR DAN MOTOR LISTRIK'],
-    ['d1' => '7', 'd2' => '9', 'keterangan' => 'GILINGIN'],
+    ['d1' => '7', 'd2' => '8', 'keterangan' => 'GENERATOR'],
+    ['d1' => '7', 'd2' => '9', 'keterangan' => 'MOTOR LISTRIK'],
+    ['d1' => '7', 'd2' => 'A', 'keterangan' => 'GILINGIN'],
+    ['d1' => '7', 'd2' => 'B', 'keterangan' => 'GEARMOTOR'],
+
+    ['d1' => '2', 'd2' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '9', 'keterangan' => ''], // ORPHAN
+    ['d1' => '6', 'd2' => '6', 'keterangan' => ''], // ORPHAN
 ];
 
 $data_kategori = [
-    // --- D1 = 1 ---
     ['d1' => '1', 'd2' => '1', 'd3' => '1', 'keterangan' => 'CAT / COATING UTAMA'],
     ['d1' => '1', 'd2' => '1', 'd3' => '2', 'keterangan' => 'BAHAN DASAR CAT'],
     ['d1' => '1', 'd2' => '1', 'd3' => '3', 'keterangan' => 'THINNER / SOLVENT'],
     ['d1' => '1', 'd2' => '1', 'd3' => '4', 'keterangan' => 'KUAS / ROL / ALAT APLIKASI'],
-    ['d1' => '1', 'd2' => '1', 'd3' => '5', 'keterangan' => 'KUAS DAN PERLENGKAPAN PENDUKUNG'], // Fixed orphan parent structure
-    ['d1' => '1', 'd2' => '1', 'd3' => '6', 'keterangan' => 'AMPLAS / ABRASIVE'], // Fixed orphan parent structure
-    ['d1' => '1', 'd2' => '1', 'd3' => '7', 'keterangan' => 'PUTTY / FILLER / DEMPUL'], // Fixed orphan parent structure
-    ['d1' => '1', 'd2' => '1', 'd3' => '8', 'keterangan' => 'ADDITIVE / HARDENER'], // Fixed orphan parent structure
-    ['d1' => '1', 'd2' => '1', 'd3' => 'Z', 'keterangan' => 'CAT LAINNYA'], // Fixed orphan parent structure
-
+    ['d1' => '1', 'd2' => '1', 'd3' => '5', 'keterangan' => 'KUAS DAN PERLENGKAPAN PENDUKUNG'],
+    ['d1' => '1', 'd2' => '1', 'd3' => '6', 'keterangan' => 'AMPLAS / ABRASIVE'],
+    ['d1' => '1', 'd2' => '1', 'd3' => '7', 'keterangan' => 'PUTTY / FILLER / DEMPUL'],
+    ['d1' => '1', 'd2' => '1', 'd3' => '8', 'keterangan' => 'ADDITIVE / HARDENER'],
+    ['d1' => '1', 'd2' => '1', 'd3' => 'Z', 'keterangan' => 'CAT LAINNYA'],
+    ['d1' => '1', 'd2' => '1', 'd3' => 'Z', 'keterangan' => 'CAT LAINNYA / UNIDENTIFIED'],
     ['d1' => '1', 'd2' => '2', 'd3' => '1', 'keterangan' => 'SEMEN & AGREGAT'],
     ['d1' => '1', 'd2' => '2', 'd3' => '2', 'keterangan' => 'BESI & BAJA'],
     ['d1' => '1', 'd2' => '2', 'd3' => '3', 'keterangan' => 'KAYU & PANEL'],
@@ -106,96 +107,73 @@ $data_kategori = [
     ['d1' => '1', 'd2' => '2', 'd3' => '8', 'keterangan' => 'KACA & AKSESORIS'],
     ['d1' => '1', 'd2' => '2', 'd3' => '9', 'keterangan' => 'LAINNYA'],
     ['d1' => '1', 'd2' => '2', 'd3' => 'Z', 'keterangan' => 'BAHAN BANGUNAN LAINNYA'],
-
     ['d1' => '1', 'd2' => '3', 'd3' => '1', 'keterangan' => 'ALAT PERKAKAS MANUAL'],
     ['d1' => '1', 'd2' => '3', 'd3' => '2', 'keterangan' => 'ALAT PERKAKAS MESIN/ELEKTRIK'],
-    ['d1' => '1', 'd2' => '3', 'd3' => '6', 'keterangan' => 'ALAT PENGAMAN (K3)'],
-    ['d1' => '1', 'd2' => '3', 'd3' => 'Z', 'keterangan' => 'ALAT LAIN-LAIN'],
-    ['d1' => '1', 'd2' => '3', 'd3' => '9', 'keterangan' => '-'],
-
+    ['d1' => '1', 'd2' => '3', 'd3' => '3', 'keterangan' => 'ALAT PENGAMAN (K3)'],
+    ['d1' => '1', 'd2' => '3', 'd3' => 'Z', 'keterangan' => 'ALAT LAIN - LAIN'],
+    ['d1' => '1', 'd2' => '3', 'd3' => 'Z', 'keterangan' => 'ALAT PERKAKAS LAINNYA'],
     ['d1' => '1', 'd2' => '5', 'd3' => '1', 'keterangan' => 'ATK'],
     ['d1' => '1', 'd2' => '5', 'd3' => '2', 'keterangan' => 'FURNITURE'],
     ['d1' => '1', 'd2' => '5', 'd3' => '3', 'keterangan' => 'TEKNOLOGI DAN KOMUNIKASI'],
-
-    ['d1' => '1', 'd2' => '6', 'd3' => '1', 'keterangan' => 'BAHAN / KAIN'],
-    ['d1' => '1', 'd2' => '6', 'd3' => '2', 'keterangan' => 'KAOS / BAJU / JAS'],
+    ['d1' => '1', 'd2' => '6', 'd3' => '1', 'keterangan' => 'BAHAN/KAIN'],
+    ['d1' => '1', 'd2' => '6', 'd3' => '2', 'keterangan' => 'KAOS/BAJU/JAS'],
     ['d1' => '1', 'd2' => '6', 'd3' => '3', 'keterangan' => 'AKSESORIS'],
-
     ['d1' => '1', 'd2' => '9', 'd3' => '1', 'keterangan' => 'ALAT PREPARASI'],
     ['d1' => '1', 'd2' => '9', 'd3' => '2', 'keterangan' => 'ALAT ANALISA'],
-
-    // --- D1 = 2 ---
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'keterangan' => 'UTILITAS LISTRIK UTAMA'],
-    ['d1' => '2', 'd2' => '0', 'd3' => 'A', 'keterangan' => 'KABEL & AKSESORIS'],
+    ['d1' => '2', 'd2' => '0', 'd3' => 'A', 'keterangan' => 'KABEL & AKSESORI'],
     ['d1' => '2', 'd2' => '0', 'd3' => 'B', 'keterangan' => 'PROTEKSI & SWITCHGEAR'],
     ['d1' => '2', 'd2' => '0', 'd3' => 'C', 'keterangan' => 'PENERANGAN'],
     ['d1' => '2', 'd2' => '0', 'd3' => 'D', 'keterangan' => 'PANEL & KONTROL'],
     ['d1' => '2', 'd2' => '0', 'd3' => 'E', 'keterangan' => 'MOTOR & DRIVE'],
-
     ['d1' => '2', 'd2' => '1', 'd3' => '1', 'keterangan' => 'LAMPU PIJAR (INCANDESCENT)'],
-    ['d1' => '2', 'd2' => '1', 'd3' => '2', 'keterangan' => 'LAMPU NEON (FLUORESCENT)'],
+    ['d1' => '2', 'd2' => '1', 'd3' => '2', 'keterangan' => 'LAMPU NEON (FLUORECENT)'],
     ['d1' => '2', 'd2' => '1', 'd3' => '3', 'keterangan' => 'LAMPU HALOGEN'],
-    ['d1' => '2', 'd2' => '1', 'd3' => '4', 'keterangan' => 'LED (LIGHT EMITTING DIODE)'],
-    ['d1' => '2', 'd2' => '1', 'd3' => '5', 'keterangan' => 'HID (HIGH INTENSITY DISCHARGE)'], // Fixed orphan parent structure
-
+    ['d1' => '2', 'd2' => '1', 'd3' => '4', 'keterangan' => 'LED  (LIGHT EMITTING DIODE)'],
+    ['d1' => '2', 'd2' => '1', 'd3' => '5', 'keterangan' => 'HID (HIGH INTENSITY DISCHARGE)'],
     ['d1' => '2', 'd2' => '2', 'd3' => '1', 'keterangan' => 'GANTUNG'],
     ['d1' => '2', 'd2' => '2', 'd3' => '2', 'keterangan' => 'TEMPEL'],
     ['d1' => '2', 'd2' => '2', 'd3' => '3', 'keterangan' => 'COLOK'],
-
     ['d1' => '2', 'd2' => '3', 'd3' => '1', 'keterangan' => 'KABEL LISTRIK'],
     ['d1' => '2', 'd2' => '3', 'd3' => '2', 'keterangan' => 'KABEL DATA & KOMUNIKASI'],
     ['d1' => '2', 'd2' => '3', 'd3' => '3', 'keterangan' => 'KABEL AUDIO & VIDEO'],
     ['d1' => '2', 'd2' => '3', 'd3' => '4', 'keterangan' => 'KABEL OTOMOTIF & INDUSTRI'],
-    ['d1' => '2', 'd2' => '3', 'd3' => '5', 'keterangan' => 'KABEL TELEKOMUNIKASI'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '3', 'd3' => '6', 'keterangan' => 'KABEL POWER'], // Fixed orphan parent structure
-
-    ['d1' => '2', 'd2' => '5', 'd3' => '1', 'keterangan' => 'PVC (POLYVINYL CHLORIDE)'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '2', 'keterangan' => 'XLPE (CROSS LINKED POLYETHYLEN'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '3', 'keterangan' => 'PE (POLYETHYLENE)'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '4', 'keterangan' => 'RUBBER / KARET (EPR, EPDM, NEO'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '5', 'keterangan' => 'SILICONE RUBBER'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '6', 'keterangan' => 'TEFLON (PTFE / FEP)'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '7', 'keterangan' => 'PAPER (PILC)'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '8', 'keterangan' => 'MICA (MICA TAPE)'], // Fixed orphan parent structure
-    ['d1' => '2', 'd2' => '5', 'd3' => '9', 'keterangan' => 'FIBERGLASS'], // Fixed orphan parent structure
-
+    ['d1' => '2', 'd2' => '3', 'd3' => '5', 'keterangan' => 'KABEL TELEKOMUNIKASI'],
+    ['d1' => '2', 'd2' => '3', 'd3' => '6', 'keterangan' => 'KABEL POWER'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '1', 'keterangan' => 'PVC (POLYVINYL CHLORIDE)'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '2', 'keterangan' => 'XLPE (CROSS LINKED POLYETHYLEN'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '3', 'keterangan' => 'PE (POLYETHYLENE)'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '4', 'keterangan' => 'RUBBER / KARET (EPR, EPDM, NEO'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '5', 'keterangan' => 'SILICONE RUBBER'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '6', 'keterangan' => 'TEFLON (PTFE / FEP)'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '7', 'keterangan' => 'PAPER (PILC)'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '8', 'keterangan' => 'MICA (MICA TAPE)'],
+    ['d1' => '2', 'd2' => '5', 'd3' => '9', 'keterangan' => 'FIBERGLASS'],
     ['d1' => '2', 'd2' => '6', 'd3' => '1', 'keterangan' => 'SEKRING'],
     ['d1' => '2', 'd2' => '6', 'd3' => '2', 'keterangan' => 'SAKLAR'],
-
     ['d1' => '2', 'd2' => '8', 'd3' => '1', 'keterangan' => 'MOTOR LISTRIK'],
     ['d1' => '2', 'd2' => '8', 'd3' => '2', 'keterangan' => 'CONTACTOR'],
     ['d1' => '2', 'd2' => '8', 'd3' => '3', 'keterangan' => 'RELAY'],
     ['d1' => '2', 'd2' => '8', 'd3' => '4', 'keterangan' => 'BREAKER / SWITCHGEAR'],
-
     ['d1' => '2', 'd2' => 'Z', 'd3' => 'Z', 'keterangan' => 'ALAT LISTRIK LAINNYA'],
-
-    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'keterangan' => 'POWER CONTROL / DRIVER'],
-
-    // --- D1 = 3 ---
-    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
     ['d1' => '3', 'd2' => '1', 'd3' => '1', 'keterangan' => 'SUKU CADANG PESAWAT PENGANGKAT'],
     ['d1' => '3', 'd2' => '1', 'd3' => '2', 'keterangan' => 'SUKU CADANG CARRIER CONVEYOR'],
     ['d1' => '3', 'd2' => '1', 'd3' => '3', 'keterangan' => 'SUKU CADANG CANE PREPARATION'],
     ['d1' => '3', 'd2' => '1', 'd3' => '4', 'keterangan' => 'SUKU CADANG GILINGAN'],
-    ['d1' => '3', 'd2' => '1', 'd3' => '5', 'keterangan' => 'PESAWAT UAP'],
-    ['d1' => '3', 'd2' => '1', 'd3' => '6', 'keterangan' => 'PUTERAN'],
-    ['d1' => '3', 'd2' => '1', 'd3' => '7', 'keterangan' => 'MESIN SARINGAN'],
-    ['d1' => '3', 'd2' => '1', 'd3' => '8', 'keterangan' => 'POMPA'],
-    ['d1' => '3', 'd2' => '1', 'd3' => '9', 'keterangan' => 'KOMPRESSOR'],
-    ['d1' => '3', 'd2' => '1', 'd3' => 'A', 'keterangan' => 'GEARBOX'],
-    ['d1' => '3', 'd2' => '1', 'd3' => 'B', 'keterangan' => 'TURBINE UAP'],
-    ['d1' => '3', 'd2' => '1', 'd3' => 'C', 'keterangan' => 'GENERATOR DAN MOTOR LISTRIK'],
-
-    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
+    ['d1' => '3', 'd2' => '1', 'd3' => '5', 'keterangan' => 'SUKU CADANG PESAWAT UAP'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '6', 'keterangan' => 'SUKU CADANG PUTERAN'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '7', 'keterangan' => 'SUKU CADANG MESIN SARINGAN'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '8', 'keterangan' => 'SUKU CADANG POMPA'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '9', 'keterangan' => 'SUKU CADANG KOMPRESSOR'],
+    ['d1' => '3', 'd2' => '1', 'd3' => 'A', 'keterangan' => 'SUKU CADANG GEARBOX'],
+    ['d1' => '3', 'd2' => '1', 'd3' => 'B', 'keterangan' => 'SUKU CADANG TURBINE UAP'],
+    ['d1' => '3', 'd2' => '1', 'd3' => 'C', 'keterangan' => 'GENERATOR '],
+    ['d1' => '3', 'd2' => '1', 'd3' => 'D', 'keterangan' => 'MOTOR LISTRIK'],
     ['d1' => '3', 'd2' => '2', 'd3' => '1', 'keterangan' => 'OIL SEAL'],
     ['d1' => '3', 'd2' => '2', 'd3' => '2', 'keterangan' => 'MECHANICAL SEAL'],
     ['d1' => '3', 'd2' => '2', 'd3' => '3', 'keterangan' => 'GASKET & PACKING'],
-    
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
     ['d1' => '3', 'd2' => '3', 'd3' => '1', 'keterangan' => 'BAUT / BOLT'],
     ['d1' => '3', 'd2' => '3', 'd3' => '2', 'keterangan' => 'MUR / NUT'],
     ['d1' => '3', 'd2' => '3', 'd3' => '3', 'keterangan' => 'SCREW / SKRUP'],
-
     ['d1' => '3', 'd2' => '4', 'd3' => 'D', 'keterangan' => 'STRUKTUR & FABRIKASI'],
     ['d1' => '3', 'd2' => '4', 'd3' => 'E', 'keterangan' => 'SUPPORT & HOLDER'],
     ['d1' => '3', 'd2' => '4', 'd3' => 'F', 'keterangan' => 'TRANSMISI RINGAN'],
@@ -203,17 +181,10 @@ $data_kategori = [
     ['d1' => '3', 'd2' => '4', 'd3' => 'H', 'keterangan' => 'PIN / KEY / BUSH'],
     ['d1' => '3', 'd2' => '4', 'd3' => 'I', 'keterangan' => 'PEGAS'],
     ['d1' => '3', 'd2' => '4', 'd3' => 'J', 'keterangan' => 'GENERAL MECHANICAL (GEAR, BELT, COUPLING)'],
-
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
     ['d1' => '3', 'd2' => '6', 'd3' => 'J', 'keterangan' => 'VALVE & PIPING ACCESSORIES (KATUP/KRAN)'],
-
-    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
     ['d1' => '3', 'd2' => '7', 'd3' => '1', 'keterangan' => 'FILTER CAIRAN (SOLAR/OLI/AIR)'],
     ['d1' => '3', 'd2' => '7', 'd3' => '2', 'keterangan' => 'SARINGAN / SCREEN / CLOTH'],
-
     ['d1' => '3', 'd2' => '9', 'd3' => 'Z', 'keterangan' => 'MECHANICAL SPAREPART LAINNYA'],
-
-    // --- D1 = 4 ---
     ['d1' => '4', 'd2' => '1', 'd3' => '1', 'keterangan' => 'PICKUP'],
     ['d1' => '4', 'd2' => '1', 'd3' => '2', 'keterangan' => 'MOBIL PENUMPANG'],
     ['d1' => '4', 'd2' => '2', 'd3' => '1', 'keterangan' => 'BUS'],
@@ -221,52 +192,110 @@ $data_kategori = [
     ['d1' => '4', 'd2' => '4', 'd3' => '1', 'keterangan' => 'AMBULANCE'],
     ['d1' => '4', 'd2' => '5', 'd3' => '1', 'keterangan' => 'DAMPAR'],
     ['d1' => '4', 'd2' => '6', 'd3' => '1', 'keterangan' => 'TRAKTOR'],
-    ['d1' => '4', 'd2' => '7', 'd3' => '1', 'keterangan' => 'TRAKTOR'],
-
-    // --- D1 = 5 ---
+    ['d1' => '4', 'd2' => '7', 'd3' => '1', 'keterangan' => 'TRUK'],
     ['d1' => '5', 'd2' => '1', 'd3' => '1', 'keterangan' => 'ALAT TANGAN (CANGKUL, ARIT, PARANG, DLL)'],
-    ['d1' => '5', 'd2' => '1', 'd3' => '2', 'keterangan' => 'ALAT GALI (SEKOP, GARPU TANAH)'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '2', 'keterangan' => 'ALAT GALI & OLAH TANAH (SEKOP, GARPU TANAH)'],
     ['d1' => '5', 'd2' => '1', 'd3' => '3', 'keterangan' => 'ALAT SEMPROT (SPRAYER, NOZZLE)'],
-    ['d1' => '5', 'd2' => '1', 'd3' => '4', 'keterangan' => 'POMPA'],
-    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'keterangan' => 'TRAKTOR & CULTIVATOR'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '4', 'keterangan' => 'POMPA PERTANIAN'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'keterangan' => 'TRAKTOR & IMPLEMENT'],
     ['d1' => '5', 'd2' => '1', 'd3' => '6', 'keterangan' => 'MESIN POTONG (BRUSH CUTTER, CHAINSAW)'],
     ['d1' => '5', 'd2' => '1', 'd3' => '7', 'keterangan' => 'SELANG & AKSESORINYA'],
-
-    ['d1' => '5', 'd2' => '2', 'd3' => '1', 'keterangan' => 'S.C ALAT PEMBASMI HAMA'],
-    ['d1' => '5', 'd2' => '2', 'd3' => '2', 'keterangan' => 'S.C ALAT PERL. PERTANIAN'],
-    ['d1' => '5', 'd2' => '2', 'd3' => '2', 'keterangan' => 'S.C ALAT PERL. PERTANIAN'],
-
-    // --- D1 = 6 ---
+    ['d1' => '5', 'd2' => '2', 'd3' => '1', 'keterangan' => 'SELANG'],
+    ['d1' => '5', 'd2' => '2', 'd3' => '2', 'keterangan' => 'NOZZLE'],
+    ['d1' => '5', 'd2' => '2', 'd3' => '3', 'keterangan' => 'SPRAYER TANK'],
+    ['d1' => '5', 'd2' => '2', 'd3' => '4', 'keterangan' => 'APD PERTANIAN'],
+    ['d1' => '5', 'd2' => '2', 'd3' => '5', 'keterangan' => 'WADAH'],
+    ['d1' => '5', 'd2' => '2', 'd3' => 'Z', 'keterangan' => 'LAINNYA'],
     ['d1' => '6', 'd2' => '1', 'd3' => '1', 'keterangan' => 'PUPUK TUNGGAL'],
     ['d1' => '6', 'd2' => '1', 'd3' => '2', 'keterangan' => 'PUPUK MAJEMUK'],
-    ['d1' => '6', 'd2' => '1', 'd3' => '3', 'keterangan' => 'BAHAN PEMBASMI HAMA'],
-    ['d1' => '6', 'd2' => '1', 'd3' => '4', 'keterangan' => 'BAHAN PEMBASMI RUMPUT'],
-    ['d1' => '6', 'd2' => '1', 'd3' => 'Z', 'keterangan' => 'PELUMAS LAINNYA'],
-
-    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
+    ['d1' => '6', 'd2' => '1', 'd3' => '3', 'keterangan' => 'INSEKTISIDA'],
+    ['d1' => '6', 'd2' => '1', 'd3' => '4', 'keterangan' => 'HERBISIDA'],
+    ['d1' => '6', 'd2' => '1', 'd3' => '5', 'keterangan' => 'FUNGISIDA'],
+    ['d1' => '6', 'd2' => '1', 'd3' => '6', 'keterangan' => 'RODENTISIDA'],
+    ['d1' => '6', 'd2' => '1', 'd3' => '7', 'keterangan' => 'ZAT PENGATUR TUMBUH'],
+    ['d1' => '6', 'd2' => '1', 'd3' => '8', 'keterangan' => 'BAHAN PEMBENAH TANAH'],
+    ['d1' => '6', 'd2' => '1', 'd3' => 'Z', 'keterangan' => 'BAHAN OPERASI TANAMAN LAINNYA'],
     ['d1' => '6', 'd2' => '2', 'd3' => '1', 'keterangan' => 'BAHAN BAKAR CAIR'],
-    ['d1' => '6', 'd2' => '2', 'd3' => '2', 'keterangan' => 'BAHAN BAKAR AMPAS'],
-    ['d1' => '6', 'd2' => '2', 'd3' => '3', 'keterangan' => 'BAHAN BAKAR KAYU'],
-    ['d1' => '6', 'd2' => '2', 'd3' => '4', 'keterangan' => 'ARANG BAKAR'],
-    ['d1' => '6', 'd2' => '2', 'd3' => '54', 'keterangan' => 'BAHAN BAKAR SEKAM'],
-
-    ['d1' => '6', 'd2' => '3', 'd3' => '1', 'keterangan' => 'MINYAK PELUMAS'],
-    ['d1' => '6', 'd2' => '3', 'd3' => '2', 'keterangan' => 'GEMUK GREASE'],
-
-    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
-    ['d1' => '6', 'd2' => '4', 'd3' => '1', 'keterangan' => 'BAHAN KIMIA UNTUK PROSES'],
-    ['d1' => '6', 'd2' => '4', 'd3' => '2', 'keterangan' => 'BHN KIMIA U/LABORATORIUM'],
-    ['d1' => '6', 'd2' => '4', 'd3' => '3', 'keterangan' => 'KARUNG DAN BENANG JAHIT'],
-    ['d1' => '6', 'd2' => '4', 'd3' => '4', 'keterangan' => 'ALAT LABORATORIUM'],
-
+    ['d1' => '6', 'd2' => '2', 'd3' => '2', 'keterangan' => 'AMPAS TEBU / BAGASSE'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '3', 'keterangan' => 'KAYU BAKAR'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '4', 'keterangan' => 'ARANG'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '5', 'keterangan' => 'SEKAM'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '6', 'keterangan' => 'BATUBARA'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '7', 'keterangan' => 'GAS BAHAN BAKAR'],
+    ['d1' => '6', 'd2' => '2', 'd3' => 'Z', 'keterangan' => 'BAHAN BAKAR LAINNYA'],
+    ['d1' => '6', 'd2' => '3', 'd3' => '1', 'keterangan' => 'MINYAK PELUMAS / OIL'],
+    ['d1' => '6', 'd2' => '3', 'd3' => '2', 'keterangan' => 'GEMUK / GREASE'],
+    ['d1' => '6', 'd2' => '3', 'd3' => '3', 'keterangan' => 'PELUMAS RANTAI'],
+    ['d1' => '6', 'd2' => '3', 'd3' => '4', 'keterangan' => 'PELUMAS KHUSUS'],
+    ['d1' => '6', 'd2' => '3', 'd3' => 'Z', 'keterangan' => 'BAHAN PELUMAS LAINNYA'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '1', 'keterangan' => 'BAHAN KIMIA PROSES'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '2', 'keterangan' => 'BAHAN KIMIA / REAGEN LABORATORIUM'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '3', 'keterangan' => 'BAHAN KEMASAN'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '4', 'keterangan' => 'BAHAN PENJERNIH / PEMURNIAN'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '5', 'keterangan' => 'BAHAN PENGOLAHAN AIR'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '6', 'keterangan' => 'BAHAN PENGENDALIAN KERAK & KOROSI'],
+    ['d1' => '6', 'd2' => '4', 'd3' => 'Z', 'keterangan' => 'BAHAN OPERASI PABRIKASI LAINNYA'],
     ['d1' => '6', 'd2' => '5', 'd3' => '1', 'keterangan' => 'CHEMICAL CLEANER'],
-    ['d1' => '6', 'd2' => '5', 'd3' => '2', 'keterangan' => 'MECHANICAL CLEANER'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '2', 'keterangan' => 'DETERGENT / SABUN'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '3', 'keterangan' => 'DEGREASER'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '4', 'keterangan' => 'DISINFECTANT'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '5', 'keterangan' => 'DESCALER'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '6', 'keterangan' => 'SOLVENT CLEANER'],
+    ['d1' => '6', 'd2' => '5', 'd3' => '7', 'keterangan' => 'BAHAN PEMBERSIH ABRASIF'],
+    ['d1' => '6', 'd2' => '5', 'd3' => 'Z', 'keterangan' => 'BAHAN PEMBERSIH LAINNYA'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '1', 'keterangan' => 'HIGHT GRADE'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '2', 'keterangan' => 'LOW GRADE'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '3', 'keterangan' => 'SUGAR DRYER & COOLER'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '4', 'keterangan' => 'SUGAR GRADER/VIBRATING SCREEN'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '5', 'keterangan' => 'BUCKET ELEVATOR'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '1', 'keterangan' => 'DSM'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '2', 'keterangan' => 'DECANTER'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '3', 'keterangan' => 'ROTARY VACUUM FILTER'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '4', 'keterangan' => 'ROTARY SCREEN'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '5', 'keterangan' => 'FILTER PRESS'],
+    ['d1' => '7', 'd2' => '3', 'd3' => '6', 'keterangan' => 'ROTARY LEAF FILTER'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'keterangan' => 'POMPA CENTRIFUGAL'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '2', 'keterangan' => 'POMPA ROTARY LOBE'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '3', 'keterangan' => 'POMPA SCREW'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '4', 'keterangan' => 'POMPA GEAR'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '5', 'keterangan' => 'POMPA ROTA'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '6', 'keterangan' => 'POMPA VAKUM'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '7', 'keterangan' => 'POMPA AIR'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '8', 'keterangan' => 'POMPA DOSING'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '9', 'keterangan' => 'POMPA HIDROLIK'],
+    ['d1' => '7', 'd2' => '4', 'd3' => 'A', 'keterangan' => 'POMPA PELUMAS'],
+    ['d1' => '7', 'd2' => '4', 'd3' => 'B', 'keterangan' => 'POMPA CELUP/SUBMERSIBLE'],
+    ['d1' => '7', 'd2' => '4', 'd3' => 'C', 'keterangan' => 'POMPA TEKANAN TINGGI'],
+    ['d1' => '7', 'd2' => '5', 'd3' => '1', 'keterangan' => 'KOMPRESOR PISTON'],
+    ['d1' => '7', 'd2' => '5', 'd3' => '2', 'keterangan' => 'KOMPRESOR SCREW'],
+    ['d1' => '7', 'd2' => '5', 'd3' => '3', 'keterangan' => 'KOMPRESOR SENTRIFUGAL'],
+    ['d1' => '7', 'd2' => '5', 'd3' => '4', 'keterangan' => 'KOMPRESOR AXIAL'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '1', 'keterangan' => 'HELICAL'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '2', 'keterangan' => 'PLANETARY'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '3', 'keterangan' => 'BEVEL'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '4', 'keterangan' => 'WORM'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '5', 'keterangan' => 'CYCLOIDAL'],
+    ['d1' => '7', 'd2' => '6', 'd3' => '6', 'keterangan' => 'HELICAL BEVEL'],
+    ['d1' => '7', 'd2' => 'B', 'd3' => '1', 'keterangan' => 'PLANETARY'],
 
-    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'keterangan' => '-'], // Ini di excel digit 4 ada, di digit 3 tidak ada
-
-    ['d1' => '6', 'd2' => '9', 'd3' => '1', 'keterangan' => 'CHEMICALS / CAIRAN KIMIA'],
-    ['d1' => '6', 'd2' => '9', 'd3' => 'z', 'keterangan' => 'BAHAN OPERASI LAINNYA'],
-    
+    ['d1' => '1', 'd2' => '3', 'd3' => '6', 'keterangan' => ''], // ORPHAN
+    ['d1' => '1', 'd2' => '3', 'd3' => '9', 'keterangan' => ''], // ORPHAN
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => '1', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => '1', 'd3' => '1', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => '7', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => '8', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => '9', 'd3' => '0', 'keterangan' => ''], // ORPHAN
+    ['d1' => '7', 'd2' => 'A', 'd3' => '0', 'keterangan' => ''], // ORPHAN
 ];
 
 $data_sub_kategori = [
@@ -338,25 +367,18 @@ $data_sub_kategori = [
     ['d1' => '1', 'd2' => '9', 'd3' => '1', 'd4' => '3', 'keterangan' => 'LAINNYA'],
     ['d1' => '1', 'd2' => '9', 'd3' => '2', 'd4' => '1', 'keterangan' => 'ELEKTRONIK'],
     ['d1' => '1', 'd2' => '9', 'd3' => '2', 'd4' => '2', 'keterangan' => 'NON ELEKTRONIK'],
-    
-    // --- POTENSI ORPHAN KARENA D2=0, D3=0, D4=HURUF ---
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'A', 'keterangan' => 'KABEL DAYA'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'B', 'keterangan' => 'PROTEKSI LISTRIK'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'C', 'keterangan' => 'KONTROL & RELAY'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'D', 'keterangan' => 'PENERANGAN'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'E', 'keterangan' => 'PANEL & BOX'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'F', 'keterangan' => 'MOTOR LISTRIK'], // ORPHAN: Kategori 2.0.0 tidak umum, D4 berupa string huruf
-    
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'A', 'keterangan' => 'KABEL DAYA'],
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'B', 'keterangan' => 'PROTEKSI LISTRIK'],
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'C', 'keterangan' => 'KONTROL & RELAY'],
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'D', 'keterangan' => 'PENERANGAN'],
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'E', 'keterangan' => 'PANEL & BOX'],
+    ['d1' => '2', 'd2' => '0', 'd3' => '0', 'd4' => 'F', 'keterangan' => 'MOTOR LISTRIK'],
     ['d1' => '2', 'd2' => '1', 'd3' => '1', 'd4' => '1', 'keterangan' => 'BOHLAM BENING'],
     ['d1' => '2', 'd2' => '1', 'd3' => '1', 'd4' => '2', 'keterangan' => 'BOHLAM BURAM'],
     ['d1' => '2', 'd2' => '1', 'd3' => '1', 'd4' => '3', 'keterangan' => 'LAMPU DEKORASI'],
     ['d1' => '2', 'd2' => '1', 'd3' => '2', 'd4' => '1', 'keterangan' => 'TL (TUBE LAMP)'],
     ['d1' => '2', 'd2' => '1', 'd3' => '2', 'd4' => '2', 'keterangan' => 'FCL (FLUORECENT CYRCLE LAMP)'],
     ['d1' => '2', 'd2' => '1', 'd3' => '2', 'd4' => '3', 'keterangan' => 'CFL (COMPACT FLUORESCENT LAMP)'],
-    
-    // --- DATA INVALID / RUSAK ---
-    ['d1' => '2', 'd2' => '1', 'd3' => '3', 'd4' => '0', 'keterangan' => ''], // ORPHAN / INVALID: Keterangan kosong & D4 bernilai 0
-    
     ['d1' => '2', 'd2' => '1', 'd3' => '4', 'd4' => '1', 'keterangan' => 'LED BULK'],
     ['d1' => '2', 'd2' => '1', 'd3' => '4', 'd4' => '2', 'keterangan' => 'LED TUBE'],
     ['d1' => '2', 'd2' => '1', 'd3' => '4', 'd4' => '3', 'keterangan' => 'LED DOWNLIGHT'],
@@ -397,73 +419,80 @@ $data_sub_kategori = [
     ['d1' => '2', 'd2' => '3', 'd3' => '5', 'd4' => '3', 'keterangan' => 'KABEL AERIAL / ADSS'],
     ['d1' => '2', 'd2' => '3', 'd3' => '5', 'd4' => '5', 'keterangan' => 'NYMHY (ISOLASI GANDA)'],
     ['d1' => '2', 'd2' => '3', 'd3' => '5', 'd4' => '6', 'keterangan' => 'KABEL FLEKSIBEL (SERABUT)'],
-    
-    // --- POTENSI ORPHAN KARENA D2 HASIL SKIP / TIDAK SEURUT KATEGORI SEBELUMNYA ---
-    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '1', 'keterangan' => 'ALAT LISTRIK RINGAN'], // ORPHAN: Cek apakah Parent Kategori 2.6.2 ada di DB
-    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '2', 'keterangan' => 'INDUSTRI'], // ORPHAN: Cek apakah Parent Kategori 2.6.2 ada di DB
-    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '3', 'keterangan' => 'OTOMOTIF'], // ORPHAN: Cek apakah Parent Kategori 2.6.2 ada di DB
-    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '4', 'keterangan' => 'ELEKTRONIK'], // ORPHAN: Cek apakah Parent Kategori 2.6.2 ada di DB
-    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '5', 'keterangan' => 'OTOMASI'], // ORPHAN: Cek apakah Parent Kategori 2.6.2 ada di DB
-    
-    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '1', 'keterangan' => 'MOTOR AC 3 PHASE'], // ORPHAN: Cek Kategori 2.8.1
-    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '2', 'keterangan' => 'MOTOR AC 1 PHASE'], // ORPHAN: Cek Kategori 2.8.1
-    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '3', 'keterangan' => 'MOTOR DC'], // ORPHAN: Cek Kategori 2.8.1
-    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '1', 'keterangan' => 'MCB'], // ORPHAN: Cek Kategori 2.8.4
-    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '2', 'keterangan' => 'MCCB'], // ORPHAN: Cek Kategori 2.8.4
-    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '3', 'keterangan' => 'ACB (AIR CIRCUIT BREAKER)'], // ORPHAN: Cek Kategori 2.8.4
-    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '4', 'keterangan' => 'NFB (NO FUSE BREAKER)'], // ORPHAN: Cek Kategori 2.8.4
-    
-    // --- POTENSI ORPHAN KARENA D2 BERUPA HURUF ---
-    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'd4' => '1', 'keterangan' => 'INVERTER VSD'], // ORPHAN: D2 menggunakan karakter 'A'
-    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'd4' => '2', 'keterangan' => 'SOFT STARTER'], // ORPHAN: D2 menggunakan karakter 'A'
-    
-    // --- POTENSI ORPHAN KARENA D3 BER-KODE 0 (TIDAK MEMILIKI SPESIFIKASI KATEGORI) ---
-    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BALL BEARING'], // ORPHAN: Cek apakah Kategori 3.1.0 ada di DB
-    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '2', 'keterangan' => 'ROLLER BEARING'], // ORPHAN: Cek apakah Kategori 3.1.0 ada di DB
-    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '3', 'keterangan' => 'NEEDLE / BUSHING'], // ORPHAN: Cek apakah Kategori 3.1.0 ada di DB
-    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '1', 'keterangan' => 'OIL SEAL'], // ORPHAN: Cek Kategori 3.2.0
-    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '2', 'keterangan' => 'MECHANICAL SEAL'], // ORPHAN: Cek Kategori 3.2.0
-    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '3', 'keterangan' => 'GASKET / PACKING'], // ORPHAN: Cek Kategori 3.2.0
-    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '4', 'keterangan' => 'O-RING'], // ORPHAN: Cek Kategori 3.2.0
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BOLT / BAUT'], // ORPHAN: Cek Kategori 3.3.0
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '2', 'keterangan' => 'NUT / MUR'], // ORPHAN: Cek Kategori 3.3.0
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '3', 'keterangan' => 'SCREW / SEKRUP'], // ORPHAN: Cek Kategori 3.3.0
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '4', 'keterangan' => 'RING / WASHER'], // ORPHAN: Cek Kategori 3.3.0
-    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '5', 'keterangan' => 'STUD / ANGKUR / BAUT TANAM'], // ORPHAN: Cek Kategori 3.3.0
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '1', 'keterangan' => 'GATE VALVE'], // ORPHAN: Cek Kategori 3.6.0
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '2', 'keterangan' => 'GLOBE VALVE'], // ORPHAN: Cek Kategori 3.6.0
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '3', 'keterangan' => 'BALL VALVE'], // ORPHAN: Cek Kategori 3.6.0
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '4', 'keterangan' => 'BUTTERFLY VALVE'], // ORPHAN: Cek Kategori 3.6.0
-    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '5', 'keterangan' => 'CHECK VALVE'], // ORPHAN: Cek Kategori 3.6.0
-    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '1', 'keterangan' => 'FILTER OLI'], // ORPHAN: Cek Kategori 3.7.0
-    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '2', 'keterangan' => 'FILTER SOLAR / FUEL'], // ORPHAN: Cek Kategori 3.7.0
-    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '3', 'keterangan' => 'FILTER UDARA'], // ORPHAN: Cek Kategori 3.7.0
-    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '4', 'keterangan' => 'FILTER AIR / WATER'], // ORPHAN: Cek Kategori 3.7.0
-    
-    // --- POTENSI ORPHAN DIGIT 1 UTAMA BARU ---
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '1', 'keterangan' => 'ENGINE'], // ORPHAN: Cek Kategori 4.1.1
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '2', 'keterangan' => 'SISTEM PENGGERAK & TRANSMISI'], // ORPHAN: Cek Kategori 4.1.1
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '3', 'keterangan' => 'BODY'], // ORPHAN: Cek Kategori 4.1.1
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '4', 'keterangan' => 'BAN & VELG'], // ORPHAN: Cek Kategori 4.1.1
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '5', 'keterangan' => 'ELECTRICAL'], // ORPHAN: Cek Kategori 4.1.1
-    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '6', 'keterangan' => 'FILTER & PELUMAS KENDARAAN'], // ORPHAN: Cek Kategori 4.1.1
-    
-    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '1', 'keterangan' => 'NOZZLE / TIP / SPUYER'], // ORPHAN: Cek Kategori 5.1.3
-    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '2', 'keterangan' => 'VALVE / AFSLUITER'], // ORPHAN: Cek Kategori 5.1.3
-    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '1', 'keterangan' => 'MESIN / ENGINE (TRAKTOR)'], // ORPHAN: Cek Kategori 5.1.5
-    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '2', 'keterangan' => 'TRANSMISI / KOPLING (TRAKTOR)'], // ORPHAN: Cek Kategori 5.1.5
-    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '3', 'keterangan' => 'HIDROLIK / ACTUATOR (TRAKTOR)'], // ORPHAN: Cek Kategori 5.1.5
-    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '4', 'keterangan' => 'BODY / RANGKA (TRAKTOR)'], // ORPHAN: Cek Kategori 5.1.5
-    
-    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BAHAN BAKAR PADAT (ARANG)'], // ORPHAN: Cek Kategori 6.2.0
-    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'd4' => '2', 'keterangan' => 'BAHAN BAKAR CAIR (BENSIN/SOLAR)'], // ORPHAN: Cek Kategori 6.2.0
+    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '1', 'keterangan' => 'ALAT LISTRIK RINGAN'],
+    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '2', 'keterangan' => 'INDUSTRI'],
+    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '3', 'keterangan' => 'OTOMOTIF'],
+    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '4', 'keterangan' => 'ELEKTRONIK'],
+    ['d1' => '2', 'd2' => '6', 'd3' => '2', 'd4' => '5', 'keterangan' => 'OTOMASI'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '1', 'keterangan' => 'MOTOR AC 3 PHASE'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '2', 'keterangan' => 'MOTOR AC 1 PHASE'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '1', 'd4' => '3', 'keterangan' => 'MOTOR DC'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '1', 'keterangan' => 'MCB'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '2', 'keterangan' => 'MCCB'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '3', 'keterangan' => 'ACB (AIR CIRCUIT BREAKER)'],
+    ['d1' => '2', 'd2' => '8', 'd3' => '4', 'd4' => '4', 'keterangan' => 'NFB (NO FUSE BREAKER)'],
+    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'd4' => '1', 'keterangan' => 'INVERTER VSD'],
+    ['d1' => '2', 'd2' => 'A', 'd3' => '2', 'd4' => '2', 'keterangan' => 'SOFT STARTER'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BALL BEARING'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '2', 'keterangan' => 'ROLLER BEARING'],
+    ['d1' => '3', 'd2' => '1', 'd3' => '0', 'd4' => '3', 'keterangan' => 'NEEDLE / BUSHING'],
+    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '1', 'keterangan' => 'OIL SEAL'],
+    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '2', 'keterangan' => 'MECHANICAL SEAL'],
+    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '3', 'keterangan' => 'GASKET / PACKING'],
+    ['d1' => '3', 'd2' => '2', 'd3' => '0', 'd4' => '4', 'keterangan' => 'O-RING'],
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BOLT / BAUT'],
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '2', 'keterangan' => 'NUT / MUR'],
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '3', 'keterangan' => 'SCREW / SEKRUP'],
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '4', 'keterangan' => 'RING / WASHER'],
+    ['d1' => '3', 'd2' => '3', 'd3' => '0', 'd4' => '5', 'keterangan' => 'STUD / ANGKUR / BAUT TANAM'],
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '1', 'keterangan' => 'GATE VALVE'],
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '2', 'keterangan' => 'GLOBE VALVE'],
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '3', 'keterangan' => 'BALL VALVE'],
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '4', 'keterangan' => 'BUTTERFLY VALVE'],
+    ['d1' => '3', 'd2' => '6', 'd3' => '0', 'd4' => '5', 'keterangan' => 'CHECK VALVE'],
+    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '1', 'keterangan' => 'FILTER OLI'],
+    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '2', 'keterangan' => 'FILTER SOLAR / FUEL'],
+    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '3', 'keterangan' => 'FILTER UDARA'],
+    ['d1' => '3', 'd2' => '7', 'd3' => '0', 'd4' => '4', 'keterangan' => 'FILTER AIR / WATER'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '1', 'keterangan' => 'ENGINE'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '2', 'keterangan' => 'SISTEM PENGGERAK & TRANSMISI'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '3', 'keterangan' => 'BODY'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '4', 'keterangan' => 'BAN & VELG'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '5', 'keterangan' => 'ELECTRICAL'],
+    ['d1' => '4', 'd2' => '1', 'd3' => '1', 'd4' => '6', 'keterangan' => 'FILTER & PELUMAS KENDARAAN'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '1', 'keterangan' => 'HAND SPRAYER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '2', 'keterangan' => 'KNAPSACK SPRAYER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '3', 'keterangan' => 'POWER SPRAYER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '3', 'd4' => '4', 'keterangan' => 'MIST BLOWER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '1', 'keterangan' => 'HAND TRACTOR'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '2', 'keterangan' => 'FOUR WHEEL TRACTOR'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '3', 'keterangan' => 'CULTIVATOR'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '5', 'd4' => '4', 'keterangan' => 'BODY / RANGKA (TRAKTOR)'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '6', 'd4' => '1', 'keterangan' => 'BRUSH CUTTER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '6', 'd4' => '2', 'keterangan' => 'CHAINSAW'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '6', 'd4' => '3', 'keterangan' => 'HEDGE TRIMMER'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '7', 'd4' => '1', 'keterangan' => 'SELANG SEMPROT'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '7', 'd4' => '2', 'keterangan' => 'SELANG HISAP'],
+    ['d1' => '5', 'd2' => '1', 'd3' => '7', 'd4' => '3', 'keterangan' => 'SELANG TEKAN'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'd4' => '1', 'keterangan' => 'BAHAN BAKAR PADAT (ARANG)'],
+    ['d1' => '6', 'd2' => '2', 'd3' => '0', 'd4' => '2', 'keterangan' => 'BAHAN BAKAR CAIR (BENSIN/SOLAR)'],
     ['d1' => '6', 'd2' => '3', 'd3' => '1', 'd4' => '1', 'keterangan' => 'MINYAK PELUMAS (OIL)'],
     ['d1' => '6', 'd2' => '3', 'd3' => '1', 'd4' => '2', 'keterangan' => 'GEMUK (GREASE)'],
-    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'd4' => '1', 'keterangan' => 'KIMIA ASAM (ACID)'], // ORPHAN: Cek Kategori 6.4.0
-    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'd4' => '2', 'keterangan' => 'KIMIA BASA (ALKALI)'], // ORPHAN: Cek Kategori 6.4.0
-    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '1', 'keterangan' => 'LOGAM BESI / BAJA'], // ORPHAN: Cek Kategori 6.6.0
-    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '2', 'keterangan' => 'SELANG / HOSE'], // ORPHAN: Cek Kategori 6.6.0
-    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '3', 'keterangan' => 'PERLENGKAPAN LAS'] // ORPHAN: Cek Kategori 6.6.0
+    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'd4' => '1', 'keterangan' => 'KIMIA ASAM (ACID)'],
+    ['d1' => '6', 'd2' => '4', 'd3' => '0', 'd4' => '2', 'keterangan' => 'KIMIA BASA (ALKALI)'],
+    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '1', 'keterangan' => 'LOGAM BESI / BAJA'],
+    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '3', 'keterangan' => 'PERLENGKAPAN LAS'],
+    ['d1' => '7', 'd2' => '1', 'd3' => '1', 'd4' => '1', 'keterangan' => 'CONTINUOUS HIGH GRADE'],
+    ['d1' => '7', 'd2' => '1', 'd3' => '1', 'd4' => '2', 'keterangan' => 'DISCONTINUOUS HIGH GRADE'],
+    ['d1' => '7', 'd2' => '2', 'd3' => '1', 'd4' => '1', 'keterangan' => 'CONTINUOUS LOW GRADE'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '1', 'keterangan' => 'HORIZONTAL END SUCTION'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '2', 'keterangan' => 'SLURRY PUMP'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '3', 'keterangan' => 'CHOKELESS PUMP'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '4', 'keterangan' => 'INJECTION WATER FOR COOLING TOWER'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '5', 'keterangan' => 'VERTICAL SUMP'],
+    ['d1' => '7', 'd2' => '4', 'd3' => '1', 'd4' => '6', 'keterangan' => 'MULTISTAGE'],
+    
+    ['d1' => '6', 'd2' => '6', 'd3' => '0', 'd4' => '2', 'keterangan' => '-'], // ORPHAN
 ];
 
 $data_turunan_sub_kategori = [

@@ -14,18 +14,18 @@
     <!-- Satuan -->
     <div class="col-md-4 px-1 mb-2">
         <label for="satuan" class="small font-weight-bold mb-1">Satuan</label>
-        <input type="text" class="form-control form-control-sm" name="satuan" id="satuan" required>
+        <input type="text" class="form-control form-control-sm" name="satuan" id="satuan" value="<?= $barang['satuan']; ?>" required>
     </div>
 
     <!-- Nama Barang (D1 - D5) -->
     <div class="col-md-6 px-1 mb-2">
         <label for="nama_barang" class="small font-weight-bold mb-1">Nama Barang (D1 - D5)</label>
-        <textarea name="nama_barang" id="nama_barang" class="form-control form-control-sm" rows="2" required></textarea>
+        <textarea name="nama_barang" id="nama_barang" class="form-control form-control-sm" rows="2" required><?= $barang['nama_barang'] ?></textarea>
     </div>
 
     <!-- Spesifikasi / Deskripsi (D6 - D15) -->
     <div class="col-md-6 px-1 mb-2">
         <label for="deskripsi" class="small font-weight-bold mb-1">Spesifikasi (D6 - D15)</label>
-        <textarea name="deskripsi" id="deskripsi" class="form-control form-control-sm" rows="2" required></textarea>
+        <textarea name="deskripsi" id="deskripsi" class="form-control form-control-sm" rows="2" required><?= $barang['deskripsi'] ?></textarea>
     </div>
 </div>

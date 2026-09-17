@@ -46,8 +46,14 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#master"
                     aria-expanded="true" aria-controls="master">
                     <i class="fas fa-fw fa-folder"></i>
@@ -60,16 +66,10 @@
                         <a class="collapse-item" href="kategori.php">D3 Kategori</a>
                         <a class="collapse-item" href="sub_kategori.php">D4 Sub Kategori</a>
                         <a class="collapse-item" href="turunan_sub_kategori.php">D5 Turunan Sub Kategori</a>
-                        <a class="collapse-item" href="aturan_digit.php">Aturan Digit</a>
-                        <a class="collapse-item" href="barang.php">Barang</a>
+                        <a class="collapse-item" href="aturan_digit.php">Label Spesifikasi</a>
+                        <!-- <a class="collapse-item" href="barang.php">Barang</a> -->
                     </div>
                 </div>
-            </li> -->
-
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-home"></i>
-                    <span>Home</span></a>
             </li>
 
             <li class="nav-item">
@@ -82,12 +82,6 @@
                 <a class="nav-link" href="tambah_barang.php">
                     <i class="fas fa-fw fa-plus"></i>
                     <span>Tambah Barang</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="aturan_digit.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Aturan Digit</span></a>
             </li>
 
             <!-- Divider -->

@@ -11,8 +11,12 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Daftar Kelompok Utama</h6>
+            <!-- Tombol Pemicu Modal -->
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalTambahKelompok">
+                <i class="fas fa-plus mr-1"></i> Tambah Data
+            </button>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -38,5 +42,31 @@
 
 </div>
 <!-- /.container-fluid -->
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="modalTambahKelompok" tabindex="-1" role="dialog" aria-labelledby="modalTambahKelompokLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold text-primary" id="modalTambahKelompokLabel">Tambah Kelompok Utama</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="simpan_kelompok_utama.php" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="keterangan" class="font-weight-bold">Keterangan</label>
+                        <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Masukkan keterangan..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="submit" name="submit" class="btn btn-primary"><i class="fas fa-save mr-1"></i> Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <?php include('footer.php'); ?>

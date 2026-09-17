@@ -36,22 +36,24 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <!-- <th>D1</th>
-                            <th>D2</th>
-                            <th>D3</th>
-                            <th>D4</th>
-                            <th>D5</th> -->
-                            <!-- <th>Kode 5 Digit</th> -->
                             <th>Kode</th>
                             <th>Nama</th>
+                            <th>Spesifikasi</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                             <tr>
-                                <td><?= $row['id']; ?></td>
-                                <td><strong><?= $row['kode_barang']; ?></strong></td>
-                                <td><?= $row['nama_barang']; ?></td>
+                                <td><?= htmlspecialchars($row['id']); ?></td>
+                                <td><strong><?= htmlspecialchars($row['kode_barang']); ?></strong></td>
+                                <td><?= htmlspecialchars($row['nama_barang']); ?></td>
+                                <td><?= htmlspecialchars($row['deskripsi']); ?></td>
+                                <td>
+                                    <a href="edit_barang.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm" title="Edit Barang">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                </td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>

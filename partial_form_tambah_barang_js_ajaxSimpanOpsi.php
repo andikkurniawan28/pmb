@@ -58,6 +58,7 @@ $('.btn-add-digit').click(function () {
                 // Tambah option baru & buat terpilih (selected)
                 var newOption = new Option(res.kode + ' - ' + res.nilai, res.id, true, true);
                 $(newOption).attr('data-kode', res.kode);
+                $(newOption).attr('data-keterangan', res.nilai);
                 
                 $select.append(newOption).val(res.id).trigger('change');
                 $('#input_new_d' + digitNum).val('');

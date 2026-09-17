@@ -18,23 +18,78 @@ $(document).ready(function() {
 
     <?php include('partial_form_tambah_barang_js_checkAturanDigit.php'); ?>
 
-    // 4. Hitung Kode Barang 15-Digit secara Real-Time (Pad 0 jika belum dipilih)
+    // function updateKodeBarang() {
+    //     var fullCode = '';
+    //     var namaBarangParts = [];
+
+    //     for (var i = 1; i <= 15; i++) {
+    //         var selectedOption = $('#d' + i + '_id option:selected');
+    //         var selectedKode = selectedOption.data('kode');
+    //         var selectedKeterangan = selectedOption.data('keterangan');
+            
+    //         // 1. Olah Kode Barang (15 Digit)
+    //         if (selectedKode !== undefined && selectedKode !== '' && selectedKode !== null) {
+    //             fullCode += String(selectedKode);
+    //         } else {
+    //             fullCode += '0';
+    //         }
+
+    //         // 2. Olah Nama Barang (Khusus Digit 1 - 5)
+    //         if (i <= 5) {
+    //             if (selectedKeterangan !== undefined && selectedKeterangan !== '' && selectedKeterangan !== null) {
+    //                 namaBarangParts.push(selectedKeterangan);
+    //             }
+    //         }
+    //     }
+
+    //     // Gabungkan keterangan terpilih dari D1-D5
+    //     var fullNamaBarang = namaBarangParts.join(' - ');
+
+    //     // Set nilai ke input masing-masing
+    //     $('#kode_barang').val(fullCode);
+    //     $('#nama_barang').val(fullNamaBarang);
+
+    //     checkAturanDigit(fullCode);
+    // }
+
     function updateKodeBarang() {
         var fullCode = '';
+        var namaBarangParts = [];
+        var deskripsiParts = [];
 
         for (var i = 1; i <= 15; i++) {
-            var selectedKode = $('#d' + i + '_id option:selected').data('kode');
+            var selectedOption = $('#d' + i + '_id option:selected');
+            var selectedKode = selectedOption.data('kode');
+            var selectedKeterangan = selectedOption.data('keterangan');
             
-            // Jika opsi dipilih dan memiliki data-kode, gunakan kode tersebut.
-            // Jika belum dipilih / kosong / undefined, ganti otomatis dengan '0'.
+            // 1. Olah Kode Barang (15 Digit)
             if (selectedKode !== undefined && selectedKode !== '' && selectedKode !== null) {
                 fullCode += String(selectedKode);
             } else {
                 fullCode += '0';
             }
+
+            // 2. Olah Keterangan
+            if (selectedKeterangan !== undefined && selectedKeterangan !== '' && selectedKeterangan !== null) {
+                if (i <= 5) {
+                    // Digit 1 - 5 masuk ke Nama Barang
+                    namaBarangParts.push(selectedKeterangan);
+                } else {
+                    // Digit 6 - 15 masuk ke Deskripsi
+                    deskripsiParts.push(selectedKeterangan);
+                }
+            }
         }
 
+        // Format masing-masing teks dengan separator yang ditentukan
+        var fullNamaBarang = namaBarangParts.join(' - ');
+        var fullDeskripsi = deskripsiParts.join(', ');
+
+        // Set nilai ke input/textarea masing-masing
         $('#kode_barang').val(fullCode);
+        $('#nama_barang').val(fullNamaBarang);
+        $('#deskripsi').val(fullDeskripsi);
+
         checkAturanDigit(fullCode);
     }
 
@@ -71,7 +126,8 @@ $(document).ready(function() {
                         if (data && data.length > 0) {
                             var html = '<option value="">-- Pilih D' + nextLevel + ' --</option>';
                             $.each(data, function (i, item) {
-                                html += '<option value="' + item.id + '" data-kode="' + item.kode + '">' + item.kode + ' - ' + item.keterangan + '</option>';
+                                // html += '<option value="' + item.id + '" data-kode="' + item.kode + '">' + item.kode + ' - ' + item.keterangan + '</option>';
+                                html += `<option value="${item.id}" data-kode="${item.kode}" data-keterangan="${item.keterangan}">${item.kode} - ${item.keterangan}</option>`;
                             });
                             $('#d' + nextLevel + '_id').html(html).prop('disabled', false);
                         } else {

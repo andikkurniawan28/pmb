@@ -54,25 +54,25 @@
             </div>
         </div>
 
-        <!-- Menu Aturan Digit -->
+        <!-- Menu Label Spesifikasi -->
         <div class="col-xl-4 col-md-4 mb-4">
             <div class="card border-left-secondary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Aturan Digit</div>
-                            <p class="text-muted small mt-2 mb-0">Lihat, kelola seluruh aturan digit.</p>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Label Spesifikasi</div>
+                            <p class="text-muted small mt-2 mb-0">Lihat, kelola seluruh label spesifikasi.</p>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-table fa-2x text-gray-300"></i>
+                            <i class="fas fa-tags fa-2x text-gray-300"></i>
                         </div>
                     </div>
                     <hr class="my-3">
                     <a href="aturan_digit.php" class="btn btn-secondary btn-icon-split">
                         <span class="icon text-white-50">
-                            <i class="fas fa-table"></i>
+                            <i class="fas fa-list"></i>
                         </span>
-                        <span class="text">Buka Aturan Digit</span>
+                        <span class="text">Buka Label Spesifikasi</span>
                     </a>
                 </div>
             </div>
