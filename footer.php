@@ -5,7 +5,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Penataan Master Barang</span>
                     </div>
                 </div>
             </footer>
@@ -58,6 +58,40 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- SweetAlert2 Library CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script Notifikasi SweetAlert berdasarkan Parameter Status PHP -->
+    <script>
+    $(document).ready(function() {
+        // Ambil query parameter 'status' dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        if (status === 'success') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: 'Data berhasil disimpan.',
+                timer: 2500,
+                showConfirmButton: false
+            });
+            // Hapus parameter URL agar saat refresh alert tidak muncul lagi
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (status === 'update_success') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil Diperbarui!',
+                text: 'Data berhasil diperbarui.',
+                timer: 2500,
+                showConfirmButton: false
+            });
+            // Hapus parameter URL agar saat refresh alert tidak muncul lagi
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    });
+    </script>
 
 </body>
 

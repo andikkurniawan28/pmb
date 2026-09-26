@@ -18,40 +18,6 @@ $(document).ready(function() {
 
     <?php include('partial_form_tambah_barang_js_checkAturanDigit.php'); ?>
 
-    // function updateKodeBarang() {
-    //     var fullCode = '';
-    //     var namaBarangParts = [];
-
-    //     for (var i = 1; i <= 15; i++) {
-    //         var selectedOption = $('#d' + i + '_id option:selected');
-    //         var selectedKode = selectedOption.data('kode');
-    //         var selectedKeterangan = selectedOption.data('keterangan');
-            
-    //         // 1. Olah Kode Barang (15 Digit)
-    //         if (selectedKode !== undefined && selectedKode !== '' && selectedKode !== null) {
-    //             fullCode += String(selectedKode);
-    //         } else {
-    //             fullCode += '0';
-    //         }
-
-    //         // 2. Olah Nama Barang (Khusus Digit 1 - 5)
-    //         if (i <= 5) {
-    //             if (selectedKeterangan !== undefined && selectedKeterangan !== '' && selectedKeterangan !== null) {
-    //                 namaBarangParts.push(selectedKeterangan);
-    //             }
-    //         }
-    //     }
-
-    //     // Gabungkan keterangan terpilih dari D1-D5
-    //     var fullNamaBarang = namaBarangParts.join(' - ');
-
-    //     // Set nilai ke input masing-masing
-    //     $('#kode_barang').val(fullCode);
-    //     $('#nama_barang').val(fullNamaBarang);
-
-    //     checkAturanDigit(fullCode);
-    // }
-
     function updateKodeBarang() {
         var fullCode = '';
         var namaBarangParts = [];
@@ -66,7 +32,7 @@ $(document).ready(function() {
             if (selectedKode !== undefined && selectedKode !== '' && selectedKode !== null) {
                 fullCode += String(selectedKode);
             } else {
-                fullCode += '0';
+                fullCode += '00';
             }
 
             // 2. Olah Keterangan
@@ -97,7 +63,7 @@ $(document).ready(function() {
     function autoFillZeroes(fromLevel) {
         for (var i = fromLevel; i <= 15; i++) {
             $('#d' + i + '_id')
-                .html('<option value="" data-kode="0" selected>0</option>')
+                .html('<option value="" data-kode="00" selected>00</option>')
                 .prop('disabled', false);
         }
         updateKodeBarang();
@@ -113,7 +79,7 @@ $(document).ready(function() {
         updateKodeBarang();
 
         if (currentLevel < 15) {
-            if (selectedId && selectedId !== '0') {
+            if (selectedId && selectedId !== '00') {
                 $.ajax({
                     url: 'get_options.php',
                     type: 'POST',
@@ -138,7 +104,7 @@ $(document).ready(function() {
                         console.error("Error get_options.php D" + nextLevel + ":", xhr.responseText);
                     }
                 });
-            } else if (selectedId === '0') {
+            } else if (selectedId === '00') {
                 autoFillZeroes(nextLevel);
             }
         }

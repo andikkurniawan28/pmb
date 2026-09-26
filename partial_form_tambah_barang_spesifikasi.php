@@ -24,7 +24,7 @@
                 </select>
 
                 <!-- Input Teks Opsi Baru (Lebar Fleksibel Kecil) -->
-                <input type="text" class="form-control form-control-sm px-1" id="input_new_d<?= $i; ?>" placeholder="+ Baru" style="max-width: 65px;">
+                <input type="text" class="form-control form-control-sm px-1" id="input_new_d<?= $i; ?>" placeholder="+ Nilai" style="max-width: 65px;">
                 
                 <!-- Tombol Simpan Icon Only untuk Menghemat Ruang Horisontal -->
                 <div class="input-group-append">

@@ -2,7 +2,9 @@
 var activeMatchedKode = '';
 
 // 3. Check Aturan Digit & Populate Options D6 - D15
-function checkAturanDigit(kodeBarang) {
+// Parameter "onDone" (opsional): fungsi yang akan dipanggil SETELAH proses
+// pengisian dropdown D6-D15 benar-benar selesai (baik ketemu aturan, tidak ketemu, maupun error).
+function checkAturanDigit(kodeBarang, onDone) {
     var prefix5Digit = kodeBarang.substring(0, 5);
 
     if (prefix5Digit.length > 0) {
@@ -67,7 +69,7 @@ function checkAturanDigit(kodeBarang) {
                                     html += `<option value="${item.id}" data-kode="${item.kode}" data-keterangan="${ket}">${item.kode} - ${item.nilai}</option>`;
                                 });
                             } else {
-                                html += '<option value="0" data-kode="0" data-keterangan="">0 - (Default / Kosong)</option>';
+                                html += '<option value="0" data-kode="00" data-keterangan="">00 - (Default / Kosong)</option>';
                             }
 
                             $select.html(html);
@@ -90,15 +92,30 @@ function checkAturanDigit(kodeBarang) {
                     
                     resetLabels();
                 }
+
+                // Beri tahu pemanggil bahwa proses pengisian dropdown D6-D15 sudah selesai
+                if (typeof onDone === 'function') {
+                    onDone();
+                }
             },
             error: function () {
                 activeMatchedKode = '';
                 resetLabels();
+
+                // Tetap panggil onDone walau terjadi error, supaya proses yang menunggu tidak macet
+                if (typeof onDone === 'function') {
+                    onDone();
+                }
             }
         });
     } else {
         activeMatchedKode = '';
         $('#info_aturan_container').addClass('d-none');
         resetLabels();
+
+        // Tidak ada prefix untuk dicek -> langsung selesai
+        if (typeof onDone === 'function') {
+            onDone();
+        }
     }
 }

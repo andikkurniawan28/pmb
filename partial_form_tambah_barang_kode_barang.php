@@ -28,4 +28,11 @@
         <label for="deskripsi" class="small font-weight-bold mb-1">Spesifikasi (D6 - D15)</label>
         <textarea name="deskripsi" id="deskripsi" class="form-control form-control-sm" rows="2" required></textarea>
     </div>
+
+    <!-- Catatan -->
+    <div class="col-md-12 px-1 mb-2">
+        <label for="catatan" class="small font-weight-bold mb-1">Catatan</label>
+        <textarea name="catatan" id="catatan" class="form-control form-control-sm" rows="2"></textarea>
+    </div>
+
 </div>

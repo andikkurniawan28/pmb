@@ -29,7 +29,7 @@ $result = $stmt->get_result();
 
 $next_kode = '';
 
-if ($result && $result->num_rows > 0) {
+/*if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $last_kode = strtoupper(trim($row['kode']));
 
@@ -57,6 +57,58 @@ if ($result && $result->num_rows > 0) {
 } else {
     // Jika belum ada data sama sekali untuk d5 ini, mulai dari 1
     $next_kode = '1';
+}*/
+
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $last_kode = strtoupper(trim($row['kode']));
+
+    // 2. Logika Auto Increment 2 Digit Basis 36 (0-9 lalu A-Z per digit)
+    $charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // 36 karakter
+    $base    = strlen($charset); // 36
+    $max_num = ($base * $base) - 1; // ZZ = 1295
+
+    // Konversi kode terakhir (2 digit basis-36) -> desimal
+    $current_num = 0;
+    $valid = true;
+    for ($i = 0; $i < strlen($last_kode); $i++) {
+        $pos = strpos($charset, $last_kode[$i]);
+        if ($pos === false) {
+            $valid = false;
+            break;
+        }
+        $current_num = ($current_num * $base) + $pos;
+    }
+
+    if (!$valid) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Format kode terakhir tidak valid: ' . $last_kode
+        ]);
+        exit;
+    }
+
+    if ($current_num >= $max_num) {
+        // Sudah sampai ZZ (Penuh)
+        echo json_encode([
+            'success' => false,
+            'message' => 'Kapasitas kode untuk opsi ini sudah penuh! (Maksimal 00-ZZ)'
+        ]);
+        exit;
+    }
+
+    $next_num = $current_num + 1;
+
+    // Konversi kembali desimal -> 2 digit basis-36 (zero-padded)
+    $next_kode = '';
+    $n = $next_num;
+    for ($i = 0; $i < 2; $i++) {
+        $next_kode = $charset[$n % $base] . $next_kode;
+        $n = intdiv($n, $base);
+    }
+} else {
+    // Jika belum ada data sama sekali untuk d5 ini, mulai dari 01
+    $next_kode = '01';
 }
 
 // 3. Simpan Data Baru ke Database

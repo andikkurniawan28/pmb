@@ -39,6 +39,7 @@
                             <th>Kode</th>
                             <th>Nama</th>
                             <th>Spesifikasi</th>
+                            <th>Catatan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -49,6 +50,7 @@
                                 <td><strong><?= htmlspecialchars($row['kode_barang']); ?></strong></td>
                                 <td><?= htmlspecialchars($row['nama_barang']); ?></td>
                                 <td><?= htmlspecialchars($row['deskripsi']); ?></td>
+                                <td><?= htmlspecialchars($row['catatan']); ?></td>
                                 <td>
                                     <a href="edit_barang.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm" title="Edit Barang">
                                         <i class="fas fa-edit"></i> Edit

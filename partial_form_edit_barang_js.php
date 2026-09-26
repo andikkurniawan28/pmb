@@ -40,9 +40,13 @@ $(document).ready(function() {
 
     /**
      * 1. FUNGSI MANDIRI: HANYA UNTUK GENERATE & UPDATE KODE BARANG
-     * Selalu berjalan independen agar kode 15 digit selalu terbentuk.
+     * Selalu berjalan independen agar kode 25 digit selalu terbentuk.
+     *
+     * Parameter "onDone" (opsional): dipanggil SETELAH checkAturanDigit selesai
+     * mengisi dropdown D6-D15. Dipakai saat kita perlu menunggu dropdown
+     * benar-benar terisi sebelum memasang nilai tersimpan (lihat initEditSequence).
      */
-    function generateKodeBarangOnly() {
+    function generateKodeBarangOnly(onDone) {
         var fullCode = '';
 
         for (var i = 1; i <= 15; i++) {
@@ -52,16 +56,19 @@ $(document).ready(function() {
             if (selectedKode !== undefined && selectedKode !== '' && selectedKode !== null) {
                 fullCode += String(selectedKode);
             } else {
-                fullCode += '0';
+                fullCode += '00';
             }
         }
 
         // Set nilai ke input kode_barang
         $('#kode_barang').val(fullCode);
 
-        // Jalankan pengecekan aturan digit untuk D6-D15 secara mandiri
+        // Jalankan pengecekan aturan digit untuk D6-D15 (ini yang mengisi dropdown D6-D15)
         if (typeof checkAturanDigit === 'function') {
-            checkAturanDigit(fullCode);
+            checkAturanDigit(fullCode, onDone);
+        } else if (typeof onDone === 'function') {
+            // Jaga-jaga kalau checkAturanDigit tidak ada, tetap lanjutkan alur
+            onDone();
         }
 
         return fullCode;
@@ -111,26 +118,33 @@ $(document).ready(function() {
     function autoFillZeroes(fromLevel) {
         for (var i = fromLevel; i <= 15; i++) {
             $('#d' + i + '_id')
-                .html('<option value="" data-kode="0" selected>0</option>')
+                .html('<option value="" data-kode="00" selected>00</option>')
                 .prop('disabled', false);
         }
         updateKodeBarang();
     }
 
-    // Fungsi fetch AJAX berbasis Promise untuk D1 sampai D15
+    /**
+     * FUNGSI MANDIRI: FETCH & SET SATU LEVEL DROPDOWN
+     * CATATAN PENTING: fungsi ini HANYA dipakai untuk rantai D1 -> D5.
+     * D6-D15 TIDAK memakai fungsi ini lagi -- dropdown D6-D15 diisi oleh
+     * checkAturanDigit() (lihat file partial_form_tambah_barang_js_checkAturanDigit.php),
+     * karena isi dropdownnya ditentukan oleh tabel aturan_digit, bukan relasi ID biasa.
+     */
     function fetchAndSetLevel(currentLevel, parentId, targetValue) {
         return new Promise(function(resolve) {
             var nextLevel = currentLevel + 1;
 
-            if (currentLevel >= 15 || !parentId || parentId === '0') {
-                if (parentId === '0') autoFillZeroes(nextLevel);
+            if (nextLevel > 5) {
+                // Di luar cakupan fungsi ini (D6 ke atas ditangani checkAturanDigit)
                 resolve();
                 return;
             }
 
-            var requestParentId = parentId;
-            if (nextLevel >= 6) {
-                requestParentId = $('#d5_id').val() || savedValues.d5 || parentId;
+            if (!parentId) {
+                autoFillZeroes(nextLevel);
+                resolve();
+                return;
             }
 
             $.ajax({
@@ -138,7 +152,7 @@ $(document).ready(function() {
                 type: 'POST',
                 data: {
                     level: 'd' + nextLevel,
-                    parent_id: requestParentId,
+                    parent_id: parentId,
                     digit_number: nextLevel
                 },
                 dataType: 'json',
@@ -153,13 +167,12 @@ $(document).ready(function() {
                         if (targetValue) {
                             $('#d' + nextLevel + '_id').val(targetValue);
                         }
-                    } else if (targetValue && targetValue !== '0' && targetValue !== '') {
+                    } else if (targetValue) {
                         $('#d' + nextLevel + '_id').val(targetValue);
                     } else {
-                        $('#d' + nextLevel + '_id').html('<option value="" data-kode="0" selected>0</option>').prop('disabled', false);
+                        $('#d' + nextLevel + '_id').html('<option value="" data-kode="00" selected>00</option>').prop('disabled', false);
                     }
 
-                    // Update kode barang & jalankan checkAturanDigit secara mandiri
                     generateKodeBarangOnly();
                     resolve();
                 },
@@ -177,60 +190,76 @@ $(document).ready(function() {
 
     // Event Manual Change oleh Pengguna (User Mengubah Dropdown)
     $('.select-level').change(function () {
-        isManualChange = true; // Tandai bahwa user melakukan aksi manual
+        isManualChange = true;
 
         var currentLevel = parseInt($(this).attr('data-level'));
         var nextLevel = currentLevel + 1;
         var selectedId = $(this).val();
 
-        resetSubDropdowns(nextLevel);
-        
-        // Jalankan fungsi update lengkap (Kode + Nama + Deskripsi)
-        updateKodeBarang();
+        if (currentLevel < 5) {
+            // Hanya D1-D4 yang perlu reset & fetch rantai berikutnya (sampai D5)
+            resetSubDropdowns(nextLevel);
+            updateKodeBarang();
 
-        if (currentLevel < 15 && selectedId && selectedId !== '0') {
-            fetchAndSetLevel(currentLevel, selectedId, null);
-        } else if (selectedId === '0') {
-            autoFillZeroes(nextLevel);
+            if (selectedId) {
+                fetchAndSetLevel(currentLevel, selectedId, null);
+            } else {
+                autoFillZeroes(nextLevel);
+            }
+        } else {
+            // D5 berubah -> D6-D15 otomatis diisi ulang oleh checkAturanDigit
+            // lewat pemanggilan updateKodeBarang() -> generateKodeBarangOnly() di bawah ini.
+            // D6-D15 berubah -> cukup update kode barang, tidak perlu fetch apapun.
+            updateKodeBarang();
         }
     });
 
-    // 2. Fungsi Utama Auto-Select D1 s/d D15 saat awal muat
+    /**
+     * FUNGSI UTAMA AUTO-SELECT SAAT EDIT
+     *
+     * Tahap 1: D1-D5 -> rantai berjenjang (child bergantung ID parent langsung)
+     * Tahap 2: D6-D15 -> HARUS MENUNGGU dropdown-nya selesai diisi oleh checkAturanDigit
+     *          (dipanggil lewat generateKodeBarangOnly), baru nilai tersimpan dipasang.
+     *          Ini titik yang sebelumnya bikin D6-D15 gagal ter-select: nilai dipasang
+     *          SEBELUM dropdown selesai diisi pilihan.
+     */
     async function initEditSequence() {
         console.log("Memulai Render Data Edit...", savedValues);
-        isManualChange = false; // Matikan penimpaan nama_barang/deskripsi saat loading awal
+        isManualChange = false;
 
-        if (savedValues.d1) {
-            // Set D1
-            $('#d1_id').val(savedValues.d1);
-            generateKodeBarangOnly();
-
-            // Loop hirarki D1 sampai D14
-            for (let i = 1; i < 15; i++) {
-                let currentVal = $('#d' + i + '_id').val();
-                let nextTargetVal = savedValues['d' + (i + 1)];
-
-                if (currentVal && currentVal !== '0') {
-                    await fetchAndSetLevel(i, currentVal, nextTargetVal);
-                } else if (nextTargetVal && nextTargetVal !== '0') {
-                    await fetchAndSetLevel(i, savedValues['d' + i], nextTargetVal);
-                } else {
-                    break;
-                }
-            }
-
-            // Restore nilai D6-D15 jika opsi sudah dirender
-            for (let d = 6; d <= 15; d++) {
-                if (savedValues['d' + d]) {
-                    $('#d' + d + '_id').val(savedValues['d' + d]);
-                }
-            }
-
-            // Panggilan akhir untuk memastikan kode terbentuk utuh & D6-D15 tampil
-            generateKodeBarangOnly();
-        } else {
+        if (!savedValues.d1) {
             console.warn("savedValues.d1 kosong/tidak terdeteksi dari PHP!");
+            return;
         }
+
+        // ---- TAHAP 1: D1 - D5 (rantai berjenjang, wajib berurutan) ----
+        $('#d1_id').val(savedValues.d1);
+
+        for (let i = 1; i <= 4; i++) {
+            let currentVal = $('#d' + i + '_id').val();
+            let nextTargetVal = savedValues['d' + (i + 1)];
+
+            if (!currentVal) break; // rantai D1-D5 putus, tidak bisa lanjut ke level berikut
+
+            await fetchAndSetLevel(i, currentVal, nextTargetVal);
+        }
+
+        // ---- TAHAP 2: D6 - D15 (menunggu checkAturanDigit selesai mengisi dropdown) ----
+        await new Promise(function (resolve) {
+            generateKodeBarangOnly(function () {
+                // Titik ini dijalankan SETELAH dropdown D6-D15 sudah terisi pilihan.
+                // Sekarang baru aman memasang nilai tersimpan.
+                for (let d = 6; d <= 15; d++) {
+                    if (savedValues['d' + d]) {
+                        $('#d' + d + '_id').val(savedValues['d' + d]);
+                    }
+                }
+
+                // Susun ulang kode_barang final dengan D6-D15 yang sudah terpasang
+                generateKodeBarangOnly();
+                resolve();
+            });
+        });
     }
 
     // Jalankan sequence inisialisasi

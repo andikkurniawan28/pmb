@@ -17,6 +17,7 @@ $kode_barang             = trim($_POST['kode_barang'] ?? '');
 $nama_barang             = trim($_POST['nama_barang'] ?? '');
 $deskripsi               = trim($_POST['deskripsi'] ?? '');
 $satuan                  = trim($_POST['satuan'] ?? '');
+$catatan                 = trim($_POST['catatan'] ?? '');
 $kode_5_digit            = substr($kode_barang, 0, 5); // Ambil 5 digit pertama
 
 $kelompok_utama_id       = cleanInput($_POST['kelompok_utama_id'] ?? null);
@@ -59,6 +60,7 @@ try {
         nama_barang,
         deskripsi,
         satuan,
+        catatan,
         digit6_id,
         digit7_id,
         digit8_id,
@@ -69,14 +71,14 @@ try {
         digit13_id,
         digit14_id,
         digit15_id
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt) {
         mysqli_stmt_bind_param(
             $stmt,
-            "iiiiisssssiiiiiiiiii",
+            "iiiiissssssiiiiiiiiii",
             $kelompok_utama_id,
             $sub_kelompok_utama_id,
             $kategori_id,
@@ -87,6 +89,7 @@ try {
             $nama_barang,
             $deskripsi,
             $satuan,
+            $catatan,
             $digit6_id,
             $digit7_id,
             $digit8_id,
