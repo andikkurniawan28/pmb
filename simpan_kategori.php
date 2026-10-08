@@ -2,9 +2,10 @@
 include('koneksi.php');
 
 if (isset($_POST['submit'])) {
-    $sub_kelompok_utama_id = mysqli_real_escape_string($conn, trim($_POST['sub_kelompok_utama_id']));
+    $sub_kelompok_utama_id  = mysqli_real_escape_string($conn, trim($_POST['sub_kelompok_utama_id']));
     $kode_kategori          = mysqli_real_escape_string($conn, trim($_POST['kode']));
-    $keterangan            = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $keterangan             = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $nama_barang            = mysqli_real_escape_string($conn, trim($_POST['nama_barang']));
 
     if (!empty($sub_kelompok_utama_id) && !empty($kode_kategori) && !empty($keterangan)) {
 
@@ -42,8 +43,8 @@ if (isset($_POST['submit'])) {
         }
 
         // 4. Simpan data ke tabel kategori sesuai struktur database
-        $query_insert = "INSERT INTO kategori (kelompok_utama_id, sub_kelompok_utama_id, kode, gabungan, keterangan) 
-                         VALUES ('$kelompok_utama_id', '$sub_kelompok_utama_id', '$kode_kategori', '$gabungan', '$keterangan')";
+        $query_insert = "INSERT INTO kategori (kelompok_utama_id, sub_kelompok_utama_id, kode, gabungan, keterangan, nama_barang) 
+                         VALUES ('$kelompok_utama_id', '$sub_kelompok_utama_id', '$kode_kategori', '$gabungan', '$keterangan', '$nama_barang')";
 
         if (mysqli_query($conn, $query_insert)) {
             header("Location: kategori.php?status=success");

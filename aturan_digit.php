@@ -24,7 +24,6 @@
                     <thead>
                         <tr>
                             <th>Kode</th>
-                            <th>Kelompok</th>
                             <th>D6</th>
                             <th>D7</th>
                             <th>D8</th>
@@ -41,7 +40,6 @@
                         <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                             <tr>
                                 <td><span class="badge badge-primary px-2 py-1"><?= htmlspecialchars($row['kode_kategori']); ?></span></td>
-                                <td><strong><?= htmlspecialchars($row['nama_kelompok_excel'] ?? '-'); ?></strong></td>
                                 <td><?= htmlspecialchars($row['param_d6'] ?? '-'); ?></td>
                                 <td><?= htmlspecialchars($row['param_d7'] ?? '-'); ?></td>
                                 <td><?= htmlspecialchars($row['param_d8'] ?? '-'); ?></td>
@@ -76,74 +74,74 @@
             <form action="simpan_aturan_digit.php" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="kode_kategori" class="font-weight-bold">Kode Kategori (3 - 5 Digit) <span class="text-danger">*</span></label>
+                        <label for="kode_kategori" class="font-weight-bold">Kode Kategori <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="kode_kategori" name="kode_kategori" 
-                               placeholder="Contoh: A01 atau B102C" 
-                               minlength="3" maxlength="5" pattern="[A-Za-z0-9]{3,5}" 
-                               title="Kode harus terdiri dari 3 hingga 5 karakter alfanumerik" 
+                               placeholder="" 
+                               minlength="1" maxlength="5" pattern="[A-Za-z0-9]{3,5}" 
+                               title="Kode harus terdiri dari 1 hingga 5 karakter alfanumerik" 
                                required autocomplete="off">
-                        <small class="form-text text-muted">Minimal 3 karakter, maksimal 5 karakter.</small>
+                        <small class="form-text text-muted">Minimal 1 karakter, maksimal 5 karakter.</small>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="nama_kelompok_excel" class="font-weight-bold">Nama Kelompok <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="nama_kelompok_excel" name="nama_kelompok_excel" placeholder="Masukkan nama kelompok..." required autocomplete="off">
-                    </div>
+                    </div> -->
 
                     <hr>
                     <h6 class="font-weight-bold text-secondary mb-3">Label Parameter Digit (D6 - D15)</h6>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="param_d6">Param D6</label>
+                            <label for="param_d6">D6</label>
                             <input type="text" class="form-control" id="param_d6" name="param_d6" placeholder="Contoh: Ukuran / Merk" autocomplete="off">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="param_d7">Param D7</label>
+                            <label for="param_d7">D7</label>
                             <input type="text" class="form-control" id="param_d7" name="param_d7" placeholder="Contoh: Bahan / Warna" autocomplete="off">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="param_d8">Param D8</label>
+                            <label for="param_d8">D8</label>
                             <input type="text" class="form-control" id="param_d8" name="param_d8" autocomplete="off">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="param_d9">Param D9</label>
+                            <label for="param_d9">D9</label>
                             <input type="text" class="form-control" id="param_d9" name="param_d9" autocomplete="off">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="param_d10">Param D10</label>
+                            <label for="param_d10">D10</label>
                             <input type="text" class="form-control" id="param_d10" name="param_d10" autocomplete="off">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="param_d11">Param D11</label>
+                            <label for="param_d11">D11</label>
                             <input type="text" class="form-control" id="param_d11" name="param_d11" autocomplete="off">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="param_d12">Param D12</label>
+                            <label for="param_d12">D12</label>
                             <input type="text" class="form-control" id="param_d12" name="param_d12" autocomplete="off">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="param_d13">Param D13</label>
+                            <label for="param_d13">D13</label>
                             <input type="text" class="form-control" id="param_d13" name="param_d13" autocomplete="off">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="param_d14">Param D14</label>
+                            <label for="param_d14">D14</label>
                             <input type="text" class="form-control" id="param_d14" name="param_d14" autocomplete="off">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="param_d15">Param D15</label>
+                            <label for="param_d15">D15</label>
                             <input type="text" class="form-control" id="param_d15" name="param_d15" autocomplete="off">
                         </div>
                     </div>

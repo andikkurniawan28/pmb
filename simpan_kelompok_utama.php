@@ -2,7 +2,8 @@
 include('koneksi.php');
 
 if (isset($_POST['submit'])) {
-    $keterangan = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $keterangan     = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $nama_barang    = mysqli_real_escape_string($conn, trim($_POST['nama_barang']));
 
     if (!empty($keterangan)) {
         // 1. Ambil kode terakhir dari tabel kelompok_utama
@@ -34,7 +35,7 @@ if (isset($_POST['submit'])) {
         }
 
         // 3. Simpan data baru beserta kodenya
-        $query_insert = "INSERT INTO kelompok_utama (kode, keterangan) VALUES ('$next_kode', '$keterangan')";
+        $query_insert = "INSERT INTO kelompok_utama (kode, keterangan, nama_barang) VALUES ('$next_kode', '$keterangan', '$nama_barang')";
         
         if (mysqli_query($conn, $query_insert)) {
             header("Location: kelompok_utama.php?status=success");

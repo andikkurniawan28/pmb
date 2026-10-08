@@ -5,6 +5,7 @@ if (isset($_POST['submit'])) {
     $kelompok_utama_id = mysqli_real_escape_string($conn, trim($_POST['kelompok_utama_id']));
     $kode_sub          = mysqli_real_escape_string($conn, trim($_POST['kode']));
     $keterangan        = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $nama_barang       = mysqli_real_escape_string($conn, trim($_POST['nama_barang']));
 
     if (!empty($kelompok_utama_id) && !empty($kode_sub) && !empty($keterangan)) {
 
@@ -36,8 +37,8 @@ if (isset($_POST['submit'])) {
         }
 
         // 4. Simpan ke database jika kode gabungan belum ada
-        $query_insert = "INSERT INTO sub_kelompok_utama (kelompok_utama_id, kode, gabungan, keterangan) 
-                         VALUES ('$kelompok_utama_id', '$kode_sub', '$gabungan', '$keterangan')";
+        $query_insert = "INSERT INTO sub_kelompok_utama (kelompok_utama_id, kode, gabungan, keterangan, nama_barang) 
+                         VALUES ('$kelompok_utama_id', '$kode_sub', '$gabungan', '$keterangan', '$nama_barang')";
 
         if (mysqli_query($conn, $query_insert)) {
             header("Location: sub_kelompok_utama.php?status=success");

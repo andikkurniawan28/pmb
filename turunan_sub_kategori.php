@@ -56,6 +56,7 @@
                             <th>D5</th>
                             <th>Gabungan</th>
                             <th>Keterangan</th>
+                            <th>Nama</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,6 +69,7 @@
                                 <td><?= htmlspecialchars($row['kode']); ?></td>
                                 <td><?= htmlspecialchars($row['gabungan']); ?></td>
                                 <td><?= htmlspecialchars($row['keterangan']); ?></td>
+                                <td><?= htmlspecialchars($row['nama_barang']); ?></td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -109,6 +111,10 @@
                     <div class="form-group">
                         <label for="keterangan" class="font-weight-bold">Keterangan Turunan Sub Kategori <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Masukkan keterangan..." required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="keterangan" class="font-weight-bold">Nama Barang <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Masukkan nama_barang..." required autocomplete="off">
                     </div>
                 </div>
                 <div class="modal-footer">

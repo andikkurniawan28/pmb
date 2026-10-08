@@ -84,6 +84,12 @@
                     <span>Tambah Barang</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="cari_barang.php">
+                    <i class="fas fa-fw fa-search"></i>
+                    <span>Cari Barang</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

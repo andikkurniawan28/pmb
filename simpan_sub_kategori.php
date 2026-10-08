@@ -5,6 +5,7 @@ if (isset($_POST['submit'])) {
     $kategori_id        = mysqli_real_escape_string($conn, trim($_POST['kategori_id']));
     $kode_sub_kategori  = mysqli_real_escape_string($conn, trim($_POST['kode']));
     $keterangan         = mysqli_real_escape_string($conn, trim($_POST['keterangan']));
+    $nama_barang        = mysqli_real_escape_string($conn, trim($_POST['nama_barang']));
 
     if (!empty($kategori_id) && !empty($kode_sub_kategori) && !empty($keterangan)) {
 
@@ -44,8 +45,8 @@ if (isset($_POST['submit'])) {
         }
 
         // 4. Simpan ke database
-        $query_insert = "INSERT INTO sub_kategori (kelompok_utama_id, sub_kelompok_utama_id, kategori_id, kode, gabungan, keterangan) 
-                         VALUES ('$kelompok_utama_id', '$sub_kelompok_utama_id', '$kategori_id', '$kode_sub_kategori', '$gabungan', '$keterangan')";
+        $query_insert = "INSERT INTO sub_kategori (kelompok_utama_id, sub_kelompok_utama_id, kategori_id, kode, gabungan, keterangan, nama_barang) 
+                         VALUES ('$kelompok_utama_id', '$sub_kelompok_utama_id', '$kategori_id', '$kode_sub_kategori', '$gabungan', '$keterangan', '$nama_barang')";
 
         if (mysqli_query($conn, $query_insert)) {
             header("Location: sub_kategori.php?status=success");

@@ -25,6 +25,7 @@
                         <tr>
                             <th>D1</th>
                             <th>Keterangan</th>
+                            <th>Nama Barang</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,6 +33,7 @@
                             <tr>
                                 <td><?= htmlspecialchars($row['kode']); ?></td>
                                 <td><?= htmlspecialchars($row['keterangan']); ?></td>
+                                <td><?= htmlspecialchars($row['nama_barang']); ?></td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -58,6 +60,10 @@
                     <div class="form-group">
                         <label for="keterangan" class="font-weight-bold">Keterangan</label>
                         <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Masukkan keterangan..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="keterangan" class="font-weight-bold">Nama Barang</label>
+                        <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Masukkan nama_barang..." required>
                     </div>
                 </div>
                 <div class="modal-footer">
