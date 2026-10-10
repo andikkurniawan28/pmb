@@ -127,7 +127,7 @@ if (!empty($clean_kode)) {
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-muted font-weight-bold">Deskripsi</td>
+                            <td class="text-muted font-weight-bold">Spesifikasi</td>
                             <td>:</td>
                             <td class="text-dark">
                                 <?= nl2br(htmlspecialchars($barang['deskripsi'] ?? '-')); ?>

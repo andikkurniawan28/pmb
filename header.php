@@ -67,6 +67,9 @@
                         <a class="collapse-item" href="sub_kategori.php">D4 Sub Kategori</a>
                         <a class="collapse-item" href="turunan_sub_kategori.php">D5 Turunan Sub Kategori</a>
                         <a class="collapse-item" href="aturan_digit.php">Label Spesifikasi</a>
+                        <?php for ($i = 6; $i <= 15; $i++): ?>
+                            <a class="collapse-item" href="digit_handler.php?digit=<?= $i; ?>">D<?= $i; ?> Digit <?= $i; ?></a>
+                        <?php endfor; ?>
                         <!-- <a class="collapse-item" href="barang.php">Barang</a> -->
                     </div>
                 </div>

@@ -52,6 +52,7 @@
                             <th>Gabungan</th>
                             <th>Keterangan</th>
                             <th>Nama</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,6 +65,17 @@
                                 <td><?= htmlspecialchars($row['gabungan']); ?></td>
                                 <td><?= htmlspecialchars($row['keterangan']); ?></td>
                                 <td><?= htmlspecialchars($row['nama_barang']); ?></td>
+                                <td>
+                                    <!-- Tombol Edit menggunakan id -->
+                                    <a href="edit_sub_kategori.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+
+                                    <!-- Tombol Delete menggunakan id dengan konfirmasi -->
+                                    <a href="hapus_sub_kategori.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
+                                        <i class="fas fa-trash"></i> Hapus
+                                    </a>
+                                </td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>

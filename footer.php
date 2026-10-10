@@ -89,6 +89,16 @@
             });
             // Hapus parameter URL agar saat refresh alert tidak muncul lagi
             window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (status === 'delete_success') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil Dihapus!',
+                text: 'Data berhasil dihapus.',
+                timer: 2500,
+                showConfirmButton: false
+            });
+            // Hapus parameter URL agar saat refresh alert tidak muncul lagi
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
     });
     </script>

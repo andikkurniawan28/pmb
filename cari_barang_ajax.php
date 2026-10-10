@@ -55,16 +55,33 @@ if ($action === 'search') {
     $where = ["1=1"];
 
     // Filter Global Search (Kode Barang, Nama Barang, Deskripsi, Kode/Nama Lama, Satuan)
+    // if (!empty($keyword)) {
+    //     $search = mysqli_real_escape_string($conn, $keyword);
+    //     $where[] = "(
+    //         b.kode_barang LIKE '%$search%' OR 
+    //         b.nama_barang LIKE '%$search%' OR 
+    //         b.deskripsi LIKE '%$search%' OR 
+    //         b.kode_barang_lama LIKE '%$search%' OR 
+    //         b.nama_barang_lama LIKE '%$search%' OR 
+    //         b.satuan LIKE '%$search%'
+    //     )";
+    // }
+
     if (!empty($keyword)) {
-        $search = mysqli_real_escape_string($conn, $keyword);
-        $where[] = "(
-            b.kode_barang LIKE '%$search%' OR 
-            b.nama_barang LIKE '%$search%' OR 
-            b.deskripsi LIKE '%$search%' OR 
-            b.kode_barang_lama LIKE '%$search%' OR 
-            b.nama_barang_lama LIKE '%$search%' OR 
-            b.satuan LIKE '%$search%'
-        )";
+        $kata = preg_split('/\s+/', trim($keyword));
+        $kolom = [
+            'b.kode_barang', 'b.nama_barang', 'b.deskripsi',
+            'b.kode_barang_lama', 'b.nama_barang_lama', 'b.satuan'
+        ];
+
+        foreach ($kata as $k) {
+            $search = mysqli_real_escape_string($conn, $k);
+            $or = [];
+            foreach ($kolom as $col) {
+                $or[] = "$col LIKE '%$search%'";
+            }
+            $where[] = "(" . implode(' OR ', $or) . ")";
+        }
     }
 
     // Filter Famili D1 - D5
