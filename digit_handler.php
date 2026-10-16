@@ -1,6 +1,14 @@
 <?php
 include('koneksi.php');
 
+// Format D5 menjadi tepat 5 karakter: potong jika lebih, isi "0" di kanan jika kurang
+function format_d5($value) {
+    $value = trim($value);
+    if ($value === '') return '';   // D5 kosong tetap kosong (opsional di form)
+    $value = substr($value, 0, 5);
+    return str_pad($value, 5, '0', STR_PAD_RIGHT);
+}
+
 // 1. Tentukan digit aktif dari URL (default ke 6 jika tidak ada/invalid), batasi hanya angka 6 sampai 15
 $digit = isset($_GET['digit']) ? (int)$_GET['digit'] : 0;
 
@@ -131,7 +139,7 @@ $result = mysqli_query($conn, $query_select);
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                                 <tr>
-                                    <td><?= htmlspecialchars($row['d5']); ?></td>
+                                    <td><?= htmlspecialchars(format_d5($row['d5'])); ?></td>
                                     <td><?= htmlspecialchars($row['kode']); ?></td>
                                     <td><?= htmlspecialchars($row['nilai']); ?></td>
                                     <td>

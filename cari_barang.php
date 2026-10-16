@@ -31,7 +31,21 @@ $result_d1 = mysqli_query($conn,$query_d1);
                         </button>
                     </div>
                 </div>
-                <small class="form-text text-muted">Pencarian akan mencocokkan kode barang, nama barang, dan deskripsi secara otomatis.</small>
+
+                <!-- PILIHAN MODE PENCARIAN (KODE BARU / KODE LAMA) -->
+                <div class="mt-2">
+                    <span class="small font-weight-bold text-dark mr-2">Cari berdasarkan:</span>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="mode_baru" name="search_mode" value="baru" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="mode_baru">Kode Baru (kode, nama, spesifikasi)</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="mode_lama" name="search_mode" value="lama" class="custom-control-input">
+                        <label class="custom-control-label" for="mode_lama">Kode Lama (kode, nama, deskripsi)</label>
+                    </div>
+                </div>
+
+                <small class="form-text text-muted">Pilih mode pencarian di atas. Tampilan hasil tetap menggunakan data baru.</small>
             </div>
 
             <hr class="my-3" style="border-top: 1px solid #e3e6f0;">
@@ -127,7 +141,8 @@ $(document).ready(function() {
 
     // 1. FUNCTION PENCARIAN (AJAX PANGGIL HASIL BARANG)
     function muatDataBarang() {
-        let keyword = $('#global_search').val();
+        let keyword    = $('#global_search').val();
+        let searchMode = $('input[name="search_mode"]:checked').val(); // 'baru' atau 'lama'
         let d1 = $('#d1_id').val();
         let d2 = $('#d2_id').val();
         let d3 = $('#d3_id').val();
@@ -150,6 +165,7 @@ $(document).ready(function() {
             data: {
                 action: 'search',
                 keyword: keyword,
+                search_mode: searchMode,
                 d1_id: d1,
                 d2_id: d2,
                 d3_id: d3,
@@ -221,6 +237,11 @@ $(document).ready(function() {
         muatDataBarang();
     });
 
+    // Muat ulang hasil saat mode pencarian (kode baru / lama) diganti
+    $('input[name="search_mode"]').on('change', function() {
+        muatDataBarang();
+    });
+
     // 3. LOGIKA CASCADING DROPDOWN (D1 - D5)
     $('.select-level').on('change', function() {
         let level = parseInt($(this).data('level'));
@@ -267,6 +288,7 @@ $(document).ready(function() {
     // 4. RESET FILTER
     $('#btn_reset').on('click', function() {
         $('#global_search').val('');
+        $('#mode_baru').prop('checked', true); // kembalikan ke Kode Baru
         $('#d1_id').val('').trigger('change');
         muatDataBarang();
     });

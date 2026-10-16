@@ -55,17 +55,17 @@ if ($action === 'search') {
     $where = ["1=1"];
 
     // Filter Global Search (Kode Barang, Nama Barang, Deskripsi, Kode/Nama Lama, Satuan)
-    if (!empty($keyword)) {
-        $search = mysqli_real_escape_string($conn, $keyword);
-        $where[] = "(
-            b.kode_barang LIKE '%$search%' OR 
-            b.nama_barang LIKE '%$search%' OR 
-            b.deskripsi LIKE '%$search%' OR 
-            b.kode_barang_lama LIKE '%$search%' OR 
-            b.nama_barang_lama LIKE '%$search%' OR 
-            b.satuan LIKE '%$search%'
-        )";
-    }
+    // if (!empty($keyword)) {
+    //     $search = mysqli_real_escape_string($conn, $keyword);
+    //     $where[] = "(
+    //         b.kode_barang LIKE '%$search%' OR 
+    //         b.nama_barang LIKE '%$search%' OR 
+    //         b.deskripsi LIKE '%$search%' OR 
+    //         b.kode_barang_lama LIKE '%$search%' OR 
+    //         b.nama_barang_lama LIKE '%$search%' OR 
+    //         b.satuan LIKE '%$search%'
+    //     )";
+    // }
 
     // if (!empty($keyword)) {
     //     $kata = preg_split('/\s+/', trim($keyword));
@@ -83,6 +83,31 @@ if ($action === 'search') {
     //         $where[] = "(" . implode(' OR ', $or) . ")";
     //     }
     // }
+
+    // sesudah
+    $search_mode = ($_GET['search_mode'] ?? 'baru') === 'lama' ? 'lama' : 'baru';
+
+    if (!empty($keyword)) {
+        $search = mysqli_real_escape_string($conn, $keyword);
+
+        if ($search_mode === 'lama') {
+            // Cari berdasarkan kode lama, nama lama, deskripsi
+            $where[] = "(
+                b.kode_barang_lama LIKE '%$search%' OR 
+                b.nama_barang_lama LIKE '%$search%' OR 
+                b.deskripsi LIKE '%$search%' OR 
+                b.satuan LIKE '%$search%'
+            )";
+        } else {
+            // Cari berdasarkan kode baru, nama baru, spesifikasi (deskripsi)
+            $where[] = "(
+                b.kode_barang LIKE '%$search%' OR 
+                b.nama_barang LIKE '%$search%' OR 
+                b.deskripsi LIKE '%$search%' OR 
+                b.satuan LIKE '%$search%'
+            )";
+        }
+    }
 
     // Filter Famili D1 - D5
     if ($d1_id > 0) $where[] = "b.kelompok_utama_id = $d1_id";
