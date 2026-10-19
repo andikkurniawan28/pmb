@@ -7500,6 +7500,212 @@ $raw_text = <<<'EOT'
 	["3633.067","THREAD CUTTER ECCENTRIC","FOR ASSY PN.066021 A","1Z0023401000001010000000000","THREADCUTTER ECCENTRIC — FOR ASSY PN 066021A | 066021 | 066021 A; 066021A | ASSY PN.066021 A THREADCUTTER ECCENTRIC","066021; 066021 A; 066021A; ASSY PN.066021 A THREADCUTTER ECCENTRIC","01","066021","00","","00","","01","066021 A; 066021A","01","ASSY PN.066021 A THREADCUTTER ECCENTRIC","00","","00","","00","","00","","00","","STRUCTURAL RECOVERY — CONTROLLED EXECUTION"],
 	["3610.003","TRITON B  1956","1 botol 500 ml","1Z0023600010001000000000000","TRITON B1956 — 500 ML | 500 M | 500 ML","500 M; 500 ML","00","","01","500 M","00","","01","500 ML","00","","00","","00","","00","","00","","00","","STRUCTURAL RECOVERY — CONTROLLED EXECUTION"],
 	["3626.06","VASELINE","","1Z0020500000000000000000000","PETROLEUM JELLY / VASELINE","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","","STRUCTURAL RECOVERY — CONTROLLED EXECUTION"],
+	["3091.193","FAN CYCLONE","","7D21200000100000000000000","INDUSTRIAL FAN","Fan Type: CYCLONE FAN","00","","00","","01","CYCLONE FAN","00","","00","","00","","00","","00","","00","","00","",""],
+	["3109.428","EXHAUST FAN","220 V / 50 HZ","7D21200000200000000000000","INDUSTRIAL FAN","Fan Type: EXHAUST FAN","00","","00","","02","EXHAUST FAN","00","","00","","00","","00","","00","","00","","00","",""],
+	["3109.575","KIPAS ANGIN/FAN 220 VOLT","220 V","7D21200000300000000000000","INDUSTRIAL FAN","Fan Type: FAN","00","","00","","03","FAN","00","","00","","00","","00","","00","","00","","00","",""],
+	["3238.130003","IDF DRYER PELLET","Kap. 580 m3/menit, Static press 250, Temp. 150 C, Motor 55 kW, 4 pole, 380Hz 1500rpm, Material carbon steel.","7D21200000000010101000000","INDUSTRIAL FAN","Motor Power: 55 kW; RPM: 1500rpm; Material: carbon steel","00","","00","","00","","00","","01","55 kW","01","1500rpm","01","carbon steel","00","","00","","00","",""],
+	["3238.130004","FDF DRYER PELLET","Kap. 102 m3/menit, Static press 150, Temp. 30 C, Motor 5,5 kW 2 pole 380V 50Hz 2970rpm, Material Carbon Steel.","7D21200000000020202000000","INDUSTRIAL FAN","Motor Power: 5,5 kW; RPM: 2970rpm; Material: Carbon Steel","00","","00","","00","","00","","02","5,5 kW","02","2970rpm","02","Carbon Steel","00","","00","","00","",""],
+	["3474.017","KIPAS RADIATOR","TRAKTOR FORD 5000/6600","7D21200000400000000000001","INDUSTRIAL FAN","Fan Type: RADIATOR FAN; MODEL: FORD 5000/6600","00","","00","","04","RADIATOR FAN","00","","00","","00","","00","","00","","00","","01","FORD 5000/6600",""],
+	["3109.05","Blower","PORTABLE PROPELER VENTILATOR/BLOWER 10inch","7D21100000005000000000000","BLOWER","Fan Diameter: 10inch","00","","00","","00","","05","10inch","00","","00","","00","","00","","00","","00","",""],
+	["3109.051","Blower","PORTABLE PROPELER VENTILATOR/BLOWER 14inch","7D21100000006000000000000","BLOWER","Fan Diameter: 14inch","00","","00","","00","","06","14inch","00","","00","","00","","00","","00","","00","",""],
+	["3109.427","BLOWER","2 IN","7D21100000004000000000000","BLOWER","Fan Diameter: 2 IN","00","","00","","00","","04","2 IN","00","","00","","00","","00","","00","","00","",""],
+	["3238.100153","BALANCING BLOWER IDF THERMODYNE","Diameter 3 m, pembuatan data","7D21100000001000000000000","BLOWER","Fan Diameter: 3 m","00","","00","","00","","01","3 m","00","","00","","00","","00","","00","","00","",""],
+	["3243.300003","BLOWER SUGAR DRYER","Blower 75 kW 2 unit, Inverter 2 unit. Sesuai Gambar yang Disetujui","7D21100000000010000000000","BLOWER","Motor Power: 75 kW","00","","00","","00","","00","","01","75 kW","00","","00","","00","","00","","00","",""],
+	["3252.000006","COMPRESOR","3 LOBE, ROTARY BLOWER, DISCHARGE 10inch, 0,8 ATM 750 RPM, 2000 M3/JAM. TWS250.","7D21101000000000100000000","BLOWER","Air Flow / Capacity: 2000 M3/JAM; RPM: 750 RPM","01","2000 M3/JAM","00","","00","","00","","00","","01","750 RPM","00","","00","","00","","00","",""],
+	["3252.000011","ROOTS BLOWER COMPRESSOR DENGAN MOTOR","Kap. 2500 m3/jam tekanan kerja 0,6 kg/cm2 650 rpm.","7D21102010000000200000000","BLOWER","Air Flow / Capacity: 2500 m3/jam; Static Pressure: 0,6 kg/cm2; RPM: 650 rpm","02","2500 m3/jam","01","0,6 kg/cm2","00","","00","","00","","02","650 rpm","00","","00","","00","","00","",""],
+	["3715.28015","KOMPRESOR AERASI LIMBAH 3LOBE","ROTARY BLOWER DIA.DISCHARGE 10inch 2000 M3/JAM","7D21101000000000000000000","BLOWER","Air Flow / Capacity: 2000 M3/JAM","01","2000 M3/JAM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3715.28109","BLOWER PEMANAS SUGAR DRIYER","RPM 3000 MOTOR 4 KWTAPPER LOCKTEBAL 150 MM","7D21100000002000000000000","BLOWER","Fan Diameter: 150 MM","00","","00","","00","","02","150 MM","00","","00","","00","","00","","00","","00","",""],
+	["3616.028","CAUSTIC SODA FLAKE 98","98  NA OH Ex. Tjiwi Kimia 25 kg/zak","64Q2001000101010000000100","KIMIA BASA (ALKALI)","Material / Chemical Type: SODIUM HYDROXIDE (NAOH); Concentration / Viscosity: 98%; Package Size: 25 KG / BAG; Physical Form: FLAKE; BRAND: TJIWI KIMIA","01","SODIUM HYDROXIDE (NAOH)","00","","01","98%","01","25 KG / BAG","01","FLAKE","00","","00","","00","","01","TJIWI KIMIA","00","",""],
+	["3631.003","QUICK LIME","Pebble Lime, CaO content 94","64Q2003000200000000000000","KIMIA BASA (ALKALI)","Material / Chemical Type: QUICK LIME (CAO); Concentration / Viscosity: CAO 94%","03","QUICK LIME (CAO)","00","","02","CAO 94%","00","","00","","00","","00","","00","","00","","00","",""],
+	["3631.005","CAUSTIC SODA FLAKE","98  NA OH Ex. Asahi 25 kg/zak","64Q2001000101010000000200","KIMIA BASA (ALKALI)","Material / Chemical Type: SODIUM HYDROXIDE (NAOH); Concentration / Viscosity: 98%; Package Size: 25 KG / BAG; Physical Form: FLAKE; BRAND: ASAHI","01","SODIUM HYDROXIDE (NAOH)","00","","01","98%","01","25 KG / BAG","01","FLAKE","00","","00","","00","","02","ASAHI","00","",""],
+	["3024.04","HYDROCHLORIC ACID / HCL","MERCK 317","64Q1003000000000000000000","KIMIA ASAM (ACID)","Material / Chemical Type: HYDROCHLORIC ACID","03","HYDROCHLORIC ACID","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3615.012","ASAM PHOSPHAT TEKNIK","H3PO4, Phosporic Acid Food Grade, 85 Kemasan IBC","64Q1001010100000001000000","KIMIA ASAM (ACID)","Material / Chemical Type: H3PO4; Grade / Composition: FOOD GRADE; Concentration / Viscosity: 85%; Storage / Safety Class: IBC","01","H3PO4","01","FOOD GRADE","01","85%","00","","00","","00","","01","IBC","00","","00","","00","",""],
+	["3615.013","ASAM PHOSPHAT TEKNIK","H3PO4, Phosporic Acid Food Grade, 85 35 kg/jerigan","64Q1001010000000000000000","KIMIA ASAM (ACID)","Material / Chemical Type: H3PO4; Grade / Composition: FOOD GRADE","01","H3PO4","01","FOOD GRADE","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3617.006","L ASCORBIO ACID","E. MERCK 127","64Q1005000000000000000101","KIMIA ASAM (ACID)","Material / Chemical Type: ASCORBIC ACID; BRAND: MERCK; MODEL: 127","05","ASCORBIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","01","127",""],
+	["3617.058","CITRUN ZUUR (ASAM SITRAT)","TEKNIS","64Q1006020000000000000000","KIMIA ASAM (ACID)","Material / Chemical Type: CITRIC ACID; Grade / Composition: TECHNICAL GRADE","06","CITRIC ACID","02","TECHNICAL GRADE","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3617.0834","ASOORBID ACID (PRO ANALYSIS)","M 127","64Q1000030000000000000000","KIMIA ASAM (ACID)","Grade / Composition: PRO ANALYSIS","00","","03","PRO ANALYSIS","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3617.119","Ascorbic Acid","E. MERCK 100468","64Q1005000000000000000102","KIMIA ASAM (ACID)","Material / Chemical Type: ASCORBIC ACID; BRAND: MERCK; MODEL: 100468","05","ASCORBIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","02","100468",""],
+	["3617.2","2,4Dichlorophenoxyacetic acid","Asam 2,4Diklorofenoksiasetat, E. MERCK 820451","64Q1007000000000000000103","KIMIA ASAM (ACID)","Material / Chemical Type: 2,4DICHLOROPHENOXYACETIC ACID; BRAND: MERCK; MODEL: 820451","07","2,4DICHLOROPHENOXYACETIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","03","820451",""],
+	["3617.203","3Indoleacetic acid","E. Sigma I3750","64Q1008000000000000000204","KIMIA ASAM (ACID)","Material / Chemical Type: 3INDOLEACETIC ACID; BRAND: SIGMA; MODEL: I3750","08","3INDOLEACETIC ACID","00","","00","","00","","00","","00","","00","","00","","02","SIGMA","04","I3750",""],
+	["3617.204","1NAPHTHYLACETIC ACID","E. Merck 806862","64Q1009000000000000000105","KIMIA ASAM (ACID)","Material / Chemical Type: 1NAPHTHYLACETIC ACID; BRAND: MERCK; MODEL: 806862","09","1NAPHTHYLACETIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","05","806862",""],
+	["3617.209","BORIC ACID","Asam Borat, H3BO3, E. MERCK 100165","64Q1010000000000000000106","KIMIA ASAM (ACID)","Material / Chemical Type: BORIC ACID; BRAND: MERCK; MODEL: 100165","10","BORIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","06","100165",""],
+	["3617.303","3INDOLE BUTYRIC ACID","CHNO, IBA, E. MERCK 100354","64Q1011000000000000000107","KIMIA ASAM (ACID)","Material / Chemical Type: 3INDOLE BUTYRIC ACID; BRAND: MERCK; MODEL: 100354","11","3INDOLE BUTYRIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","07","100354",""],
+	["3617.304","GIBBERELLIC ACID","Asam giberelat, GA3, CHO, E. Sigma G7645","64Q1012000000000000000208","KIMIA ASAM (ACID)","Material / Chemical Type: GIBBERELLIC ACID; BRAND: SIGMA; MODEL: G7645","12","GIBBERELLIC ACID","00","","00","","00","","00","","00","","00","","00","","02","SIGMA","08","G7645",""],
+	["3618.021","HYDROCHLORID ACID","H.C.L.","64Q1000000000000000000000","KIMIA ASAM (ACID)","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3618.042","MAZTREAT ACID IN","NETRALISIR","64Q1013000000000100000000","KIMIA ASAM (ACID)","Material / Chemical Type: MAZTREAT ACID IN; Application: NEUTRALIZATION","13","MAZTREAT ACID IN","00","","00","","00","","00","","01","NEUTRALIZATION","00","","00","","00","","00","",""],
+	["3631.002","TRI CHLORO ASETIC ACID","TCA MERCK 807","64Q1014000000000000000109","KIMIA ASAM (ACID)","Material / Chemical Type: TRICHLOROACETIC ACID; BRAND: MERCK; MODEL: 807","14","TRICHLOROACETIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","09","807",""],
+	["3633.032","3MORPHOLINOPROPANE SULFONIC ACID BUFFER","MERCK PTMI, 3MORPHOLINOPROPANE SULFONIC ACID BUFFER, 1.06129.0250","64Q1015000000000000000110","KIMIA ASAM (ACID)","Material / Chemical Type: 3MORPHOLINOPROPANE SULFONIC ACID; BRAND: MERCK; MODEL: 1.06129.0250","15","3MORPHOLINOPROPANE SULFONIC ACID","00","","00","","00","","00","","00","","00","","00","","01","MERCK","10","1.06129.0250",""],
+	["3621.003","PREMIUM","MIN. 8000 LTR/TRUK","6.211E+24","BAHAN BAKAR CAIR (BENSIN/SOLAR)","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.052","FILLER ROD, COPPER","3.20 MM, AWS B CUP, EUTECROD 180","3B21200000000000000010000","FILLER ROD","Standard: AWS B","00","","00","","00","","00","","00","","00","","00","","01","AWS B","00","","00","",""],
+	["3023.002","FILLER ROD, COPPER","2.00 MM","3B21200000000000000000000","FILLER ROD","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.005","KAWAT LAS ARGON","TGS 50 DIA. 2,40 mm","3B21202010000000000000001","WELDING WIRE","Component Type: ARGON FILLER ROD; Size / Dimensions: 2.40 MM; MODEL: TGS 50","02","ARGON FILLER ROD","01","2.40 MM","00","","00","","00","","00","","00","","00","","00","","01","TGS 50",""],
+	["3021.011","Kawat Las","Nikko Steel E71T1C Shielded Flux Core Wire 1,2 mm","3B21100000000000100000000","WELDING WIRE","Temperature Rating: 1C","00","","00","","00","","00","","00","","01","1C","00","","00","","00","","00","",""],
+	["3021.018","KAWAT LAS NIKKO STEEL","NS RC 52 DIA. 3.20 MM","3B21108000003020000000000","WELDING WIRE","Cross Section / Size: 3.20 MM; Conductor Material: STEEL; Insulation Material: STEEL","08","3.20 MM","00","","00","","03","STEEL","02","STEEL","00","","00","","00","","00","","00","",""],
+	["3021.062","KAWAT LAS","1,60 MM","3B21102000000000000000000","WELDING WIRE","Cross Section / Size: 1.60 MM","02","1.60 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.12","KAWAT LAS","2,50 MM Drathon 999","3B21103000000000000000000","WELDING WIRE","Cross Section / Size: 2.50 MM","03","2.50 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.187","KAWAT LAS","LB 52 Diameter 3.20 mm","3B21108000000000000000000","WELDING WIRE","Cross Section / Size: 3.20 MM","08","3.20 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.249","KAWAT LAS NIKKO STEEL","NS 8837 (HV90) Dia. 3.2 mm","3B21105000000000000000000","WELDING WIRE","Cross Section / Size: 3.2 MM","05","3.2 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.25","KAWAT LAS NS 8835 4MM","NS 8835 ( HV 800 ) Dia. 4MM","3B21107000000000000000000","WELDING WIRE","Cross Section / Size: 4MM","07","4MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3021.252","KAWAT LAS BRONZE","TOPWELD 100Z, dia 3.25 mm","3B21106000002010000000000","WELDING WIRE","Cross Section / Size: 3.25 MM; Conductor Material: BRONZE; Insulation Material: BRONZE","06","3.25 MM","00","","00","","02","BRONZE","01","BRONZE","00","","00","","00","","00","","00","",""],
+	["3023.01","KAWAT LAS,KUNINGAN 3.00 MM","3.00 MM","3B21104000000000000000000","WELDING WIRE","Cross Section / Size: 3.00 MM","04","3.00 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3023.013","KAWAT LAS ARGON/STAINLESS","","3B21203000000000000000000","WELDING WIRE","Component Type: STAINLESS ARGON FILLER ROD","03","STAINLESS ARGON FILLER ROD","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3025.000002","MIG WIRE","0,8 mm AWS A5.9 ER308L","3B21100000000000000010000","WELDING WIRE","Standard: AWS A5.9","00","","00","","00","","00","","00","","00","","00","","01","AWS A5.9","00","","00","",""],
+	["3025.000005","MIG WIRE","Stainless Steel MIG WIRE 312, Diameter 1 mm. Nikko Steel.","3B21100000001000000000000","WELDING WIRE","Conductor Material: Stainless Steel","00","","00","","00","","01","Stainless Steel","00","","00","","00","","00","","00","","00","",""],
+	["3025.000006","MIG WIRE","Nikko Steel FC631, Diameter 1,6 mm. Hard Facing.","3B21101000000000000000000","WELDING WIRE","Cross Section / Size: 1.6 MM","01","1.6 MM","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3243.020527","AIR FILTER AF4004D","U/ Puteran","3.735E+24","FILTER UDARA","Filter type: AIR FILTER; Compatible engine / equipment: PUTERAN; MODEL: AF4004D","01","AIR FILTER","01","PUTERAN","00","","00","","00","","00","","00","","00","","00","","01","AF4004D",""],
+	["3252.100053","FILTER UDARA U/COMPRESSOR","2inch","3.735E+24","FILTER UDARA","Element dimensions: 2inch","00","","00","","01","2inch","00","","00","","00","","00","","00","","00","","00","",""],
+	["3252.115005","FILTER UDARA UNTUK KOMPRESSOR","PN.32012957 4inch INGERSOL RAND T.30 M.3000","3.735E+24","FILTER UDARA","Element dimensions: 4inch","00","","00","","02","4inch","00","","00","","00","","00","","00","","00","","00","",""],
+	["3441.026","FILTER UDARA","","3.735E+24","FILTER UDARA","Filter type: AIR FILTER","01","AIR FILTER","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3475.0063","FILTER UDARA BESAR","PN. 382765200 AF.4838 LOADER inchCUMMINSinch","3.735E+24","FILTER UDARA","Filter type: AIR FILTER; Compatible engine / equipment: LOADER; BRAND: CUMMINS; MODEL: AF4838","01","AIR FILTER","02","LOADER","00","","00","","00","","00","","00","","00","","01","CUMMINS","02","AF4838",""],
+	["3475.0064","FILTER UDARA KECIL","NP. 392939200 AF 4896 LOADER inchCUMMINSinch","3.735E+24","FILTER UDARA","Filter type: AIR FILTER; Compatible engine / equipment: LOADER; BRAND: CUMMINS; MODEL: AF 4896","01","AIR FILTER","02","LOADER","00","","00","","00","","00","","00","","00","","01","CUMMINS","03","AF 4896",""],
+	["3475.131","AIR FILTER","AIR FILTER LOADER SIZE BESAR FILTER AF 2452","3.735E+24","FILTER UDARA","Filter type: AIR FILTER; Compatible engine / equipment: LOADER; MODEL: AF 2452","01","AIR FILTER","02","LOADER","00","","00","","00","","00","","00","","00","","00","","04","AF 2452",""],
+	["3476.005","FILTER UDARA,TRAKTOR","PN.82008601 TRAKTOR NEW HOLLAND TS 90","3.735E+24","FILTER UDARA","MODEL: 82008601 TRAKTOR NEW HOLLAND TS 90","00","","00","","00","","00","","00","","00","","00","","00","","00","","08","82008601 TRAKTOR NEW HOLLAND TS 90",""],
+	["3412.093","FILTER OLI","","3.734E+24","FILTER OLI","Filter type: OIL FILTER","01","OIL FILTER","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3424.002","FILTER OLI DAIHATSU TAF","1560187309","3.734E+24","FILTER OLI","Filter type: OIL FILTER; Compatible engine / equipment: DAIHATSU TAF; MODEL: 1560187309.000","01","OIL FILTER","01","DAIHATSU TAF","00","","00","","00","","00","","00","","00","","00","","01","1560187309",""],
+	["3477.020","FILTER OLI HIDROULIK","PN. 82005016 TRAKTOR NEW HOLLAND TS 6000","3.734E+24","FILTER OLI","MODEL: 82005016 TRAKTOR NEW HOLLAND TS 6000","00","","00","","00","","00","","00","","00","","00","","00","","00","","03","82005016 TRAKTOR NEW HOLLAND TS 6000",""],
+	["3059.002","RING PLAT 5/16inch","WHITWORTH 5/16 IN 1.60 MM","33B0008000301000000000000","WASHER","ID: 5/16 IN; Thickness: 1.60 MM; Type: FLAT WASHER","08","5/16 IN","00","","03","1.60 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.004","RING PLAT 1/2inch","WHITWORTH 1/2 IN 1.60 MM","33B0004000301000000000000","WASHER","ID: 1/2 IN; Thickness: 1.60 MM; Type: FLAT WASHER","04","1/2 IN","00","","03","1.60 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.005","RING PLAT 5/8inch","WHITWORTH 5/8 IN 2.54 MM","33B0009000901000000000000","WASHER","ID: 5/8 IN; Thickness: 2.54 MM; Type: FLAT WASHER","09","5/8 IN","00","","09","2.54 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.009","RING PLAT, 1inch","WHITWORTH 1 IN 2.54 MM","33B0003000901000000000000","WASHER","ID: 1 IN; Thickness: 2.54 MM; Type: FLAT WASHER","03","1 IN","00","","09","2.54 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.014","RING VEER 1/4inch","WHITWORTH 1/4 IN 1.57 MM","33B0005000202000000000000","WASHER","ID: 1/4 IN; Thickness: 1.57 MM; Type: SPRING WASHER","05","1/4 IN","00","","02","1.57 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.015","RING VEER 3/8inch","WHITWORTH 3/8 IN 2.39 MM","33B0007000802000000000000","WASHER","ID: 3/8 IN; Thickness: 2.39 MM; Type: SPRING WASHER","07","3/8 IN","00","","08","2.39 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.018","RING PLAT 5/8inch TEBAL 3 MM","","33B0000000100000000000000","WASHER","Thickness: 3 MM","00","","00","","01","3 MM","00","","00","","00","","00","","00","","00","","00","",""],
+	["3059.019","RING VEER 3/4inch","WHITWORTH 3/4 IN 4.78 MM","33B0006000E02000000000000","WASHER","ID: 3/4 IN; Thickness: 4.78 MM; Type: SPRING WASHER","06","3/4 IN","00","","0E","4.78 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.02","RING VEER 7/8inch","WHITWORTH 7/8 IN 5.56 MM","33B000A000G02000000000000","WASHER","ID: 7/8 IN; Thickness: 5.56 MM; Type: SPRING WASHER","0A","7/8 IN","00","","0G","5.56 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.021","RING, SPRING LOCK, STEEL","WHITWORTH, 1 IN X 6.35 MM","33B0003000I02000000000000","WASHER","ID: 1 IN; Thickness: 6.35 MM; Type: SPRING WASHER","03","1 IN","00","","0I","6.35 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.022","RING PLAT 4 MM","PUTIH/KUNING","33B0000000C01000000000000","WASHER","Thickness: 4 MM; Type: FLAT WASHER","00","","00","","0C","4 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.026","RING PLAT 12 MM","PUTIH/KUNING","33B0000000501000000000000","WASHER","Thickness: 12 MM; Type: FLAT WASHER","00","","00","","05","12 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.028","RING VEER 5 MM","PUTIH/KUNING","33B0000000F02000000000000","WASHER","Thickness: 5 MM; Type: SPRING WASHER","00","","00","","0F","5 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.029","RING VEER 6 MM","PUTIH/KUNING","33B0000000H02000000000000","WASHER","Thickness: 6 MM; Type: SPRING WASHER","00","","00","","0H","6 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.03","RING VEER 10 MM","PUTIH/KUNING","33B0000000402000000000000","WASHER","Thickness: 10 MM; Type: SPRING WASHER","00","","00","","04","10 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.032","RING PLAT 14 MM","PUTIH/KUNING","33B0000000601000000000000","WASHER","Thickness: 14 MM; Type: FLAT WASHER","00","","00","","06","14 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.035","RING VEER 16 MM","PUTIH / KUNING","33B0000000702000000000000","WASHER","Thickness: 16 MM; Type: SPRING WASHER","00","","00","","07","16 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.039","RING PLAT","M36","33B0000000001000000000000","WASHER","Type: FLAT WASHER","00","","00","","00","","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.044","RING VEER","M42","33B0000000002000000000000","WASHER","Type: SPRING WASHER","00","","00","","00","","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.045","RING PLAT","22 mm","33B0000000A01000000000000","WASHER","Thickness: 22 MM; Type: FLAT WASHER","00","","00","","0A","22 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.157","RING, SPRING LOCK, STEEL","WHITWORTH, 1 1/2 IN X 9.52 MM","33B0001000L02000000000000","WASHER","ID: 1 1/2 IN; Thickness: 9.52 MM; Type: SPRING WASHER","01","1 1/2 IN","00","","0L","9.52 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.158","RING, SPRING LOCK, STEEL","WHITWORTH, 1 1/4 IN X 7.92 MM","33B0002000J02000000000000","WASHER","ID: 1 1/4 IN; Thickness: 7.92 MM; Type: SPRING WASHER","02","1 1/4 IN","00","","0J","7.92 MM","02","SPRING WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.159","RING, FLAT, STEEL","WHITWORTH, 1 1/4 IN X 4.06 MM","33B0002000D01000000000000","WASHER","ID: 1 1/4 IN; Thickness: 4.06 MM; Type: FLAT WASHER","02","1 1/4 IN","00","","0D","4.06 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3059.162","RING PLAT","27 mm","33B0000000B01000000000000","WASHER","Thickness: 27 MM; Type: FLAT WASHER","00","","00","","0B","27 MM","01","FLAT WASHER","00","","00","","00","","00","","00","","00","",""],
+	["3033.014","SEAL, ROD, DUST WIPER","50.00 MM X 62.00 MM X 10.00 MM","3.2523E+24","WIPER / SCRAPER SEAL","Rod diameter: 50.00 MM","00","","01","50.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3475.011","SEAL DUST","PN. 3404420090 Loader Kawasaki 60ZIV / B5.9 C210","3.2523E+24","WIPER / SCRAPER SEAL","Wiper type / profile: DUST / WIPER SEAL; Temperature range: KAWASAKI 60ZIV / B5.9 C210; MODEL: 3404420090","02","DUST / WIPER SEAL","00","","00","","00","","00","","01","KAWASAKI 60ZIV / B5.9 C210","00","","00","","00","","02","3404420090",""],
+	["3033.321","SEAL PISTON, USHAPE","60.00 MM X 75.00 MM X 10.00 MM","3.2522E+24","PISTON SEAL","Piston diameter: 60.00 MM","00","","01","60.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3243.222146","PISTON SEAL K01R","67 X 79 X 8.25 SEAL MART NBR","3.2522E+24","PISTON SEAL","Material: NBR","00","","00","","00","","01","NBR","00","","00","","00","","00","","00","","00","",""],
+	["3292.100222","PISTON SEAL KIT","Solenoid Valve Metal Work, Gaskets Kit Valve S70 5/2 1/8inch","3.2522E+24","PISTON SEAL","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.026","SEAL, PISTON ROD, USHAPE","40.00 MM X 50.00 MM X 6.00 MM","3.2521E+24","ROD SEAL","Rod diameter: 40.00 MM","00","","01","40.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.311","SEAL PISTON ROD, USHAPE","58.00 MM X 78.00 MM X 12.00 MM","3.2521E+24","ROD SEAL","Rod diameter: 58.00 MM","00","","02","58.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.322","SEAL 0287,PISTONROD,USHAPE","25.00 MM X 38.00 MM X 8.00 MM","3.2521E+24","ROD SEAL","Rod diameter: 25.00 MM","00","","03","25.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.328","SEAL ROD, USHAPE","8.00 MM X 16.00 MM X 5.00 MM","3.2521E+24","ROD SEAL","Rod diameter: 8.00 MM","00","","04","8.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.401","SEAL, PISTON ROD, USHAPE","30.00 MM X 40.00 MM X 6.00 MM","3.2521E+24","ROD SEAL","Rod diameter: 30.00 MM","00","","05","30.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3441.033","SEAL RODA MUKA","","3.2521E+24","ROD SEAL","","00","","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.066","O RING 2 X 14 MM","2 X 14 MM","32G0000010000000000000000","ORING","Size / Dimensions: 2 X 14 MM","00","","01","2 X 14 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3033.5","SILICON ORING CORD","Dia. 3mm ex. BURGMANN","32G00000B0000000000000000","ORING","Size / Dimensions: 3MM","00","","0B","3MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3035.169","O RING V 70 / 80","","32G00011B0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 70","01","ORING","1B","NO 70","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.002","SEAL, O RING, INCH SIZE","183.74 MM X 3.53 MM","32G0000050000000000000000","ORING","Size / Dimensions: 183.74 MM X 3.53 MM","00","","05","183.74 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.005","SEAL, O RING, INCH SIZE","69.44 MM X 3.53 MM","32G0000060000000000000000","ORING","Size / Dimensions: 69.44 MM X 3.53 MM","00","","06","69.44 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.007","SEAL, O RING, INCH SIZE","148.82 MM X 3.53 MM","32G0000070000000000000000","ORING","Size / Dimensions: 148.82 MM X 3.53 MM","00","","07","148.82 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.01","O RING","2 x 30","32G00010F0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 2 X 30","01","ORING","0F","2 X 30","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.013","SEAL, O RING, INCH SIZE","34.52 MM X 3.53 MM","32G0000080000000000000000","ORING","Size / Dimensions: 34.52 MM X 3.53 MM","00","","08","34.52 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.014","SEAL, O RING, SET","ERICKS, GB OK113","32G00010M0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 113","01","ORING","0M","NO 113","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.015","SEAL, O RING, METRIC SIZE","39.50 MM X 4.00 MM","32G0000090000000000000000","ORING","Size / Dimensions: 39.50 MM X 4.00 MM","00","","09","39.50 MM X 4.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.017","O RING","No. 114","32G00010N0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 114","01","ORING","0N","NO 114","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.020","SEAL, O RING, INCH SIZE","190.09 MM X 3.53 MM","32G0000100000000000000000","ORING","Size / Dimensions: 190.09 MM X 3.53 MM","00","","10","190.09 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.021","SEAL, O RING, INCH SIZE","171.04 MM X 3.53 MM","32G0000110000000000000000","ORING","Size / Dimensions: 171.04 MM X 3.53 MM","00","","11","171.04 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.024","SEAL, O RING, INCH SIZE","142.47 MM X 3.53 MM","32G0000120000000000000000","ORING","Size / Dimensions: 142.47 MM X 3.53 MM","00","","12","142.47 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.025","SEAL, O RING, INCH SIZE","215.50 MM X 3.53 MM","32G0000130000000000000000","ORING","Size / Dimensions: 215.50 MM X 3.53 MM","00","","13","215.50 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.027","SEAL, O RING, INCH SIZE","40.87 MM X 3.53 MM","32G0000140000000000000000","ORING","Size / Dimensions: 40.87 MM X 3.53 MM","00","","14","40.87 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.028","SEAL, O RING, INCH SIZE","151.77 MM X 6.99 MM","32G0000150000000000000000","ORING","Size / Dimensions: 151.77 MM X 6.99 MM","00","","15","151.77 MM X 6.99 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.032","SEAL, O RING, METRIC SIZE","219.50 MM X 8.40 MM","32G0000160000000000000000","ORING","Size / Dimensions: 219.50 MM X 8.40 MM","00","","16","219.50 MM X 8.40 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.033","O. RING 210","","32G00010W0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 210","01","ORING","0W","NO 210","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.034","O RING","238","32G00010Z0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 238","01","ORING","0Z","NO 238","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.041","SEAL, O RING, INCH SIZE","177.39 MM X 3.53 MM","32G0000170000000000000000","ORING","Size / Dimensions: 177.39 MM X 3.53 MM","00","","17","177.39 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.045","SEAL, O RING, INCH SIZE","46.99 MM X 5.33 MM","32G0000180000000000000000","ORING","Size / Dimensions: 46.99 MM X 5.33 MM","00","","18","46.99 MM X 5.33 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.046","SEAL, O RING, INCH SIZE","129.77 MM X 3.53 MM","32G0000190000000000000000","ORING","Size / Dimensions: 129.77 MM X 3.53 MM","00","","19","129.77 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.048","SEAL, O RING, INCH SIZE","31.34 MM X 3.53 MM","32G0000200000000000000000","ORING","Size / Dimensions: 31.34 MM X 3.53 MM","00","","20","31.34 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.051","SEAL, O RING, INCH SIZE","63.09 MM X 3.53 MM","32G0000210000000000000000","ORING","Size / Dimensions: 63.09 MM X 3.53 MM","00","","21","63.09 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.058","O RING","5 mm","32G00000C0000000000000000","ORING","Size / Dimensions: 5 MM","00","","0C","5 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.061","O RING","115","32G00010O0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 115","01","ORING","0O","NO 115","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.063","O RING","10815","32G0001590000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 10815","01","ORING","59","10815","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.065","O. RING 10444 119","","32G00010Q0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 119","01","ORING","0Q","NO 119","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.075","SEAL, O RING, INCH SIZE","78.97 MM X 3.53 MM","32G0000220000000000000000","ORING","Size / Dimensions: 78.97 MM X 3.53 MM","00","","22","78.97 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.077","SEAL, O RING, INCH SIZE","20.29 MM X 2.62 MM","32G0000230000000000000000","ORING","Size / Dimensions: 20.29 MM X 2.62 MM","00","","23","20.29 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.078","O RING","No. 116","32G00010P0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 116","01","ORING","0P","NO 116","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.079","SEAL, O RING, INCH SIZE","9.19 MM X 2.62 MM","32G0000240000000000000000","ORING","Size / Dimensions: 9.19 MM X 2.62 MM","00","","24","9.19 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.084","SEAL, O RING, INCH SIZE","44.04 MM X 3.53 MM","32G0000250000000000000000","ORING","Size / Dimensions: 44.04 MM X 3.53 MM","00","","25","44.04 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.085","SEAL, O RING, INCH SIZE","26.58 MM X 3.53 MM","32G0000260000000000000000","ORING","Size / Dimensions: 26.58 MM X 3.53 MM","00","","26","26.58 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.086","SEAL, O RING, INCH SIZE","21.82 MM X 3.53 MM","32G0000270000000000000000","ORING","Size / Dimensions: 21.82 MM X 3.53 MM","00","","27","21.82 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.091","SEAL, O RING, INCH SIZE","34.59 MM X 2.62 MM 226","32G0000280000000000000000","ORING","Size / Dimensions: 34.59 MM X 2.62 MM","00","","28","34.59 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.092","SEAL, O RING, INCH SIZE","29.82 MM X 2.62 MM","32G0000290000000000000000","ORING","Size / Dimensions: 29.82 MM X 2.62 MM","00","","29","29.82 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.095","SEAL, O RING, INCH SIZE","29.75 MM X 3.53 MM","32G0000300000000000000000","ORING","Size / Dimensions: 29.75 MM X 3.53 MM","00","","30","29.75 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.096","SEAL, O RING, INCH SIZE","37.69 MM X 3.53 MM","32G0000310000000000000000","ORING","Size / Dimensions: 37.69 MM X 3.53 MM","00","","31","37.69 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.109","SEAL, O RING, METRIC SIZE","24.40 MM X 3.10 MM","32G0000320000000000000000","ORING","Size / Dimensions: 24.40 MM X 3.10 MM","00","","32","24.40 MM X 3.10 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.111","O RING SEAL 29.40 MM X 3.10 MM","29.40 MM X 3.10 MM","32G0000330000000000000000","ORING","Size / Dimensions: 29.40 MM X 3.10 MM","00","","33","29.40 MM X 3.10 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.125","O RING","3.5 x 90","32G00010H0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 3.5 X 90","01","ORING","0H","3.5 X 90","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.129","O RING SEAL 100 MM X 2 MM","100.00 MM X 2.00 MM","32G0000340000000000000000","ORING","Size / Dimensions: 100 MM X 2 MM","00","","34","100 MM X 2 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.144","O RING / I R KORD","5.00 MM","32G00000D0000000000000000","ORING","Size / Dimensions: 5.00 MM","00","","0D","5.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.147","ORING,8MM","8MM","32G00000E0000000000000000","ORING","Size / Dimensions: 8MM","00","","0E","8MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.15","O RING","5 x 410","32G00010J0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 5 X 410","01","ORING","0J","5 X 410","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.155","O RING","3 x 150","32G00010G0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 3 X 150","01","ORING","0G","3 X 150","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.157","O RING","112","32G00010L0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 112","01","ORING","0L","NO 112","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.158","O RING 10558","ORING SILICON VITON 304 X 4.5","32G0000000100000000000000","ORING","Material: VITON","00","","00","","01","VITON","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.171","O. RING VITON 70","8 MM X 330 MM","32G0000350100000000000000","ORING","Size / Dimensions: 8 MM X 330 MM; Material: VITON","00","","35","8 MM X 330 MM","01","VITON","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.201","O. RING","","32G0001000000000000000000","ORING","Seal Type: ORING","01","ORING","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.204","SEAL, O RING, INCH SIZE","56.87 MM X 1.78 MM","32G0000360000000000000000","ORING","Size / Dimensions: 56.87 MM X 1.78 MM","00","","36","56.87 MM X 1.78 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.206","SEAL, O RING, INCH SIZE","10.77 MM X 2.62 MM","32G0000370000000000000000","ORING","Size / Dimensions: 10.77 MM X 2.62 MM","00","","37","10.77 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.207","O RING","148","32G00010T0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 148","01","ORING","0T","NO 148","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.212","SEAL, O RING, INCH SIZE","59.92 MM X 3.53 MM","32G0000380000000000000000","ORING","Size / Dimensions: 59.92 MM X 3.53 MM","00","","38","59.92 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.223","SEAL, O RING, METRIC SIZE","124.60 MM X 5.70 MM","32G0000390000000000000000","ORING","Size / Dimensions: 124.60 MM X 5.70 MM","00","","39","124.60 MM X 5.70 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.227","SEAL, O RING, INCH SIZE","31.42 MM X 2.62 MM","32G0000400000000000000000","ORING","Size / Dimensions: 31.42 MM X 2.62 MM","00","","40","31.42 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.229","O RING","44 x 2","32G00010I0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 44 X 2","01","ORING","0I","44 X 2","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.235","O RING","No. 225","32G00010X0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 225","01","ORING","0X","NO 225","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.238","SEAL, O RING, INCH SIZE","40.95 MM X 2.62 MM","32G0000410000000000000000","ORING","Size / Dimensions: 40.95 MM X 2.62 MM","00","","41","40.95 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.239","SEAL, O RING, INCH SIZE","48.90 MM X 2.62 MM","32G0000420000000000000000","ORING","Size / Dimensions: 48.90 MM X 2.62 MM","00","","42","48.90 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.240","SEAL, O RING, INCH SIZE","56.74 MM X 3.53 MM","32G0000430000000000000000","ORING","Size / Dimensions: 56.74 MM X 3.53 MM","00","","43","56.74 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.241","SEAL, O RING, METRIC SIZE","69.00 MM X 4.00 MM","32G0000440000000000000000","ORING","Size / Dimensions: 69.00 MM X 4.00 MM","00","","44","69.00 MM X 4.00 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.243","O RING","10506","32G0001600000000000000000","ORING","Seal Type: ORING; Size / Dimensions: 10506","01","ORING","60","10506","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.250","SEAL, O RING, INCH SIZE","37.47 MM X 5.33 MM","32G0000450000000000000000","ORING","Size / Dimensions: 37.47 MM X 5.33 MM","00","","45","37.47 MM X 5.33 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.260","SEAL, O RING, INCH SIZE","7.65 MM X 1.78 MM","32G0000460000000000000000","ORING","Size / Dimensions: 7.65 MM X 1.78 MM","00","","46","7.65 MM X 1.78 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.261","SEAL, O RING, INCH SIZE","25.00 MM X 3.53 MM","32G0000470000000000000000","ORING","Size / Dimensions: 25.00 MM X 3.53 MM","00","","47","25.00 MM X 3.53 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.262","SEAL, O RING, METRIC SIZE","134.60 MM X 5.70 MM","32G0000480000000000000000","ORING","Size / Dimensions: 134.60 MM X 5.70 MM","00","","48","134.60 MM X 5.70 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.266","SEAL, O RING, INCH SIZE","31.12 MM X 5.33 MM","32G0000490000000000000000","ORING","Size / Dimensions: 31.12 MM X 5.33 MM","00","","49","31.12 MM X 5.33 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.270","SEAL, O RING, INCH SIZE","28.25 MM X 2.62 MM","32G0000500000000000000000","ORING","Size / Dimensions: 28.25 MM X 2.62 MM","00","","50","28.25 MM X 2.62 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.271","O RING","10915/20 x 6.5 mm","32G0000020000000000000000","ORING","Size / Dimensions: 20 x 6.5 mm","00","","02","20 x 6.5 mm","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.278","O RING","No. 234","32G00010Y0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 234","01","ORING","0Y","NO 234","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.282","O RING","8.00 x 4.22 mm","32G0000030000000000000000","ORING","Size / Dimensions: 8.00 x 4.22 mm","00","","03","8.00 x 4.22 mm","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.283","O RING","12.00inch x 8.00inch","32G0000510000000000000000","ORING","Size / Dimensions: 12.00inch X 8.00inch","00","","51","12.00inch X 8.00inch","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.285","O RING","62 x 70 MM","32G0000040000000000000000","ORING","Size / Dimensions: 62 x 70 MM","00","","04","62 x 70 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.383","O RING (BOX)","3 mm x 2 mm","32G0000520000000000000000","ORING","Size / Dimensions: 3 MM X 2 MM","00","","52","3 MM X 2 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.385","O RING","4 mm x 209 mm","32G0000530000000000000000","ORING","Size / Dimensions: 4 MM X 209 MM","00","","53","4 MM X 209 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.388","O RING","32 mm x 38 mm","32G0000540000000000000000","ORING","Size / Dimensions: 32 MM X 38 MM","00","","54","32 MM X 38 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.389","O RING","36 mm X 38 mm","32G0000550000000000000000","ORING","Size / Dimensions: 36 MM X 38 MM","00","","55","36 MM X 38 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.392","O RING","330 mm x 316 mm","32G0000560000000000000000","ORING","Size / Dimensions: 330 MM X 316 MM","00","","56","330 MM X 316 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.393","O RING","38 mm x 43 mm","32G0000570000000000000000","ORING","Size / Dimensions: 38 MM X 43 MM","00","","57","38 MM X 43 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3038.394","O RING","95 mm x 3 mm","32G0000580000000000000000","ORING","Size / Dimensions: 95 MM X 3 MM","00","","58","95 MM X 3 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3238.100198","PACK GLAND O.RING","","32G0001000000000100000000","ORING","Seal Type: ORING; Pressure Rating: PACK GLAND","01","ORING","00","","00","","00","","00","","01","PACK GLAND","00","","00","","00","","00","",""],
+	["3250.610005","ORING","DOR.085 ID 104 MM","32G00000A0000000000000000","ORING","Size / Dimensions: 104 MM","00","","0A","104 MM","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3250.610006","ORING","DOR.163 ID 103","32G00010U0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 163","01","ORING","0U","NO 163","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3250.610007","ORING","DOR.052 ID 368","32G00010K0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 052","01","ORING","0K","NO 052","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3252.110006","SEAL ( O RING ) SEDANG","","32G0001610000000000000000","ORING","Seal Type: ORING; Size / Dimensions: SEDANG","01","ORING","61","SEDANG","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3252.110014","O RING","20A11BM328, PN 95041505, IR ESH NL 8inch X 7inch","32G000000000000000000002C","ORING","MODEL: 95041505","00","","00","","00","","00","","00","","00","","00","","00","","00","","2C","95041505",""],
+	["3253.100055","FILTER OASE HEAD O RING","170/D 5","32G00010V0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 170","01","ORING","0V","NO 170","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3292.100216","SEALKIT ORING","SMC CS9550","32G00011A0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 50","01","ORING","1A","NO 50","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3292.122033","C 127  CM O RING","","32G00010S0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 127","01","ORING","0S","NO 127","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3292.12206","C 121  SW O RING","","32G00010R0000000000000000","ORING","Seal Type: ORING; Size / Dimensions: NO 121","01","ORING","0R","NO 121","00","","00","","00","","00","","00","","00","","00","","00","",""],
+	["3082.009","RING PAS","41","33B0010000001000000000000","WASHER","ID: 41; Type: FLAT WASHER","10","41","00","","00","","01","FLAT WASHER","00","","00","","00","","00","","00","","00","","41"],
+	["3059.038","RING VER","M12","33B0011000002000000000000","WASHER","ID: M12; Type: SPRING WASHER","11","M12","00","","00","","02","SPRING WASHER","00","","00","","00","","00","","00","","00","","M12"],
+	["3069.141","RING, LOCKING","DIA 70.00 MM, SKF MB 14","33B0000000K00000000000000","WASHER","Thickness: 70.00 MM","00","","00","","0K","70.00 MM","00","","00","","00","","00","","00","","00","","00","","DIA 70.00 MM, SKF MB 14"],
+	["3474.221","RING TEMBAGA","u/Louder Furukawa FL 170","33B0000000003020001000000","WASHER","Type: COPPER WASHER; Material: COPPER; Coating: FURUKAWA FL 170","00","","00","","00","","03","COPPER WASHER","02","COPPER","00","","01","FURUKAWA FL 170","00","","00","","00","","u/Louder Furukawa FL 170"],
+	["3091.552","PORTABLE PROPELER VENTILATOR","12'","7D21200000501000000000000","INDUSTRIAL FAN","Fan Type: PORTABLE PROPELLER VENTILATOR; Fan Diameter: 12inch","00","","00","","05","PORTABLE PROPELLER VENTILATOR","01","12inch","00","","00","","00","","00","","00","","00","","12'"],
+	["3292.100063","WIPER SEAT","A11 25x35x29x7.2 (L10)","3.2523E+24","WIPER / SCRAPER SEAL","Wiper type / profile: WIPER SEAL; Rod diameter: 25 MM; Housing / groove size: 35X29X7.2 MM; MODEL: A11 / L10","01","WIPER SEAL","02","25 MM","01","35X29X7.2 MM","00","","00","","00","","00","","00","","00","","01","A11 / L10","A11 25x35x29x7.2 (L10)"],
+	["3024.05","HCL/AIR KERAS","U/ PATRI SOLDER","64Q1002000000000000000000","KIMIA ASAM (ACID)","Material / Chemical Type: HCL","02","HCL","00","","00","","00","","00","","00","","00","","00","","00","","00","","U/ PATRI SOLDER"],
+	["3222.200001","MONOSEAL","Hydraulic cup dia 13inch (Leather)","3.2522E+24","PISTON SEAL","Piston diameter: 13inch; Housing / groove size: 13inch","00","","02","13inch","01","13inch","00","","00","","00","","00","","00","","00","","00","","Hydraulic cup dia (Leather)"],
+	["3615.015","NATRIUM HYDROKSIDA (NAOH)","Cairan (40 kg 25 liter)","64Q2001000002020000000000","KIMIA BASA (ALKALI)","Material / Chemical Type: SODIUM HYDROXIDE (NAOH); Package Size: 40 KG / 25 L; Physical Form: LIQUID","01","SODIUM HYDROXIDE (NAOH)","00","","00","","02","40 KG / 25 L","02","LIQUID","00","","00","","00","","00","","00","","Cairan (40 kg 25 liter)"],
+	["3631.043","SODIUM HYDROXIDE PELLETS GR","E. MERCK 6498","64Q2001000000030000000301","KIMIA BASA (ALKALI)","Material / Chemical Type: SODIUM HYDROXIDE (NAOH); Physical Form: PELLETS; BRAND: E. MERCK; MODEL: 6498","01","SODIUM HYDROXIDE (NAOH)","00","","00","","00","","03","PELLETS","00","","00","","00","","03","E. MERCK","01","6498","E. MERCK 6498"],
+	["3615.046","CRESTOPRO B895","ALKALINITY BOOSTER, CRESTOPRO B895","64Q2004000000000100000000","KIMIA BASA (ALKALI)","Material / Chemical Type: CRESTOPRO B895; Application: ALKALINITY BOOSTER","04","CRESTOPRO B895","00","","00","","00","","00","","01","ALKALINITY BOOSTER","00","","00","","00","","00","","ALKALINITY BOOSTER, CRESTOPRO B895"],
+	["3059.042","RING PLAT STAINLESS STEEL","Diameter dalam 1 Inch","33B0003000001010000000000","WASHER","ID: 1 IN; Type: FLAT WASHER; Material: STAINLESS STEEL","03","1 IN","00","","00","","01","FLAT WASHER","01","STAINLESS STEEL","00","","00","","00","","00","","00","","Diameter dalam 1 Inch"],
+	["3059.027","RING PLAT STAINLESS STEEL","1/2inch","33B0000000001010000000000","WASHER","Type: FLAT WASHER; Material: STAINLESS STEEL","00","","00","","00","","01","FLAT WASHER","01","STAINLESS STEEL","00","","00","","00","","00","","00","","1/2inch"],
+	["3252.000007","KOMPRESOR SO2 NIRA MENTAH, COMPRESSOR MOTOR","TIDEWAY TWS250, 3 LOBES ROTARY BLOWER, Q2500 M3/JAM, PRESSURE6000 mmAq. Termasuk Motor 380V 50 Hz IP 65, Insulation Class H. Terkopel dengan motor dalam sebuah frame.","7D21100000003000000000000","BLOWER","Fan Diameter: M3","00","","00","","00","","03","M3","00","","00","","00","","00","","00","","00","","TIDEWAY TWS250, 3 LOBES ROTARY BLOWER, Q2500 M3/JAM, PRESSURE6000 mmAq. Termasuk Motor 380V 50 Hz IP 65, Insulation Class H. Terkopel dengan motor dalam sebuah frame."],
+	["3023.011","LAS PERAK","","3B21201000000000000000000","FILLER ROD","Component Type: SILVER BRAZING FILLER","01","SILVER BRAZING FILLER","00","","00","","00","","00","","00","","00","","00","","00","","00","",""],
 EOT;
 
 $raw_text2 = <<<'EOT'
@@ -15190,65 +15396,79 @@ function tampilkanDuplikat($array_barang)
     ";
 }
 
-function insertKeTabelBarangOld($conn, $array_barang, $limit)
+function preloadDigit1($conn)
 {
-    try {
-        if (!is_array($array_barang)) {
-            $array_barang = [];
+	$norm = function ($v) {
+        return strtoupper(trim((string)$v));
+    };
+	$mapKelompokUtama = [];
+    $res = mysqli_query($conn, "SELECT id, kode FROM kelompok_utama");
+    if ($res) {
+        while ($r = mysqli_fetch_assoc($res)) {
+            $mapKelompokUtama[$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
         }
+    }
+	return $mapKelompokUtama;
+}
 
-        // Helper normalisasi key
-        $norm = function ($v) {
-            return strtoupper(trim((string)$v));
-        };
-
-        // =========================================================================
-        // 1. PRELOAD MAPPING DARI DATABASE
-        // =========================================================================
-
-        // --- DIGIT 1 - 5 ---
-        $mapKelompokUtama = [];
-        $res = mysqli_query($conn, "SELECT id, kode FROM kelompok_utama");
-        if ($res) {
-            while ($r = mysqli_fetch_assoc($res)) {
-                $mapKelompokUtama[$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
-            }
+function preloadDigit2($conn)
+{
+	$norm = function ($v) {
+        return strtoupper(trim((string)$v));
+    };
+	$mapSubKelompokUtama = [];
+    $res = mysqli_query($conn, "SELECT id, kelompok_utama_id, kode FROM sub_kelompok_utama");
+    if ($res) {
+        while ($r = mysqli_fetch_assoc($res)) {
+            $mapSubKelompokUtama[$r['kelompok_utama_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
         }
+    }
+	return $mapSubKelompokUtama;
+}
 
-        $mapSubKelompokUtama = [];
-        $res = mysqli_query($conn, "SELECT id, kelompok_utama_id, kode FROM sub_kelompok_utama");
-        if ($res) {
-            while ($r = mysqli_fetch_assoc($res)) {
-                $mapSubKelompokUtama[$r['kelompok_utama_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
-            }
+function preloadDigit3($conn)
+{
+	$norm = function ($v) { return strtoupper(trim((string)$v)); };
+	$mapKategori = [];
+    $res = mysqli_query($conn, "SELECT id, sub_kelompok_utama_id, kode FROM kategori");
+    if ($res) {
+        while ($r = mysqli_fetch_assoc($res)) {
+            $mapKategori[$r['sub_kelompok_utama_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
         }
+    }
+	return $mapKategori;
+}
 
-        $mapKategori = [];
-        $res = mysqli_query($conn, "SELECT id, sub_kelompok_utama_id, kode FROM kategori");
-        if ($res) {
-            while ($r = mysqli_fetch_assoc($res)) {
-                $mapKategori[$r['sub_kelompok_utama_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
-            }
+function preloadDigit4($conn)
+{
+	$norm = function ($v) { return strtoupper(trim((string)$v)); };
+	$mapSubKategori = [];
+    $res = mysqli_query($conn, "SELECT id, kategori_id, kode FROM sub_kategori");
+    if ($res) {
+        while ($r = mysqli_fetch_assoc($res)) {
+            $mapSubKategori[$r['kategori_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
         }
+    }
+	return $mapSubKategori;
+}
 
-        $mapSubKategori = [];
-        $res = mysqli_query($conn, "SELECT id, kategori_id, kode FROM sub_kategori");
-        if ($res) {
-            while ($r = mysqli_fetch_assoc($res)) {
-                $mapSubKategori[$r['kategori_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
-            }
+function preloadDigit5($conn)
+{
+	$norm = function ($v) { return strtoupper(trim((string)$v)); };
+	$mapTurunanSubKategori = [];
+    $res = mysqli_query($conn, "SELECT id, sub_kategori_id, kode FROM turunan_sub_kategori");
+    if ($res) {
+        while ($r = mysqli_fetch_assoc($res)) {
+            $mapTurunanSubKategori[$r['sub_kategori_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
         }
+    }
+	return $mapTurunanSubKategori;
+}
 
-        $mapTurunanSubKategori = [];
-        $res = mysqli_query($conn, "SELECT id, sub_kategori_id, kode FROM turunan_sub_kategori");
-        if ($res) {
-            while ($r = mysqli_fetch_assoc($res)) {
-                $mapTurunanSubKategori[$r['sub_kategori_id']][$norm($r['kode'])] = ['id' => $r['id'], 'kode' => $r['kode']];
-            }
-        }
-
-        // --- DIGIT 6 SAMPAI 15 (MAPPING: [d5][kode] => id) ---
-        $mapDigit = [];
+function preloadDigitSpesifikasi($conn)
+{
+	$norm = function ($v) { return strtoupper(trim((string)$v)); };
+	$mapDigit = [];
         for ($i = 6; $i <= 15; $i++) {
             $mapDigit[$i] = [];
             $res = mysqli_query($conn, "SELECT id, d5, kode FROM digit{$i}");
@@ -15258,185 +15478,279 @@ function insertKeTabelBarangOld($conn, $array_barang, $limit)
                 }
             }
         }
+	return $mapDigit;
+}
 
-        // =========================================================================
-        // 2. TRUNCATE TABEL BARANG
-        // =========================================================================
-        mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 0;");
+function preloadDigit($conn)
+{
+	$digit = [];
+	$digit['mapKelompokUtama'] = preloadDigit1($conn);
+	$digit['mapSubKelompokUtama'] = preloadDigit2($conn);
+	$digit['mapKategori'] = preloadDigit3($conn);
+	$digit['mapSubKategori'] = preloadDigit4($conn);
+	$digit['mapTurunanSubKategori'] = preloadDigit5($conn);
+	$digit['mapDigit'] = preloadDigitSpesifikasi($conn);
+	return $digit;
+}
 
-        if (!mysqli_query($conn, "TRUNCATE TABLE `barang`")) {
-            throw new Exception("Gagal TRUNCATE tabel barang: " . mysqli_error($conn));
+function laporkanError()
+{
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+}
+
+function kosongkanTable($conn)
+{
+	mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 0;");
+    if (!mysqli_query($conn, "TRUNCATE TABLE `barang`")) {
+        throw new Exception("Gagal TRUNCATE tabel barang: " . mysqli_error($conn));
+    }
+}
+
+function olahData($conn,$array_barang, $limit,$digit)
+{
+    $norm = function ($v) { return strtoupper(trim((string)$v)); };
+
+    $mapKelompokUtama        =$digit['mapKelompokUtama'];
+    $mapSubKelompokUtama     =$digit['mapSubKelompokUtama'];
+    $mapKategori             =$digit['mapKategori'];
+    $mapSubKategori          =$digit['mapSubKategori'];
+    $mapTurunanSubKategori   =$digit['mapTurunanSubKategori'];
+    $mapDigit                =$digit['mapDigit'];
+
+    $values     = [];
+    $statMatch  = array_fill(6, 10, 0);$failSample = [];
+    $seenKode   = [];   // kode_barang bersih => nomor baris pertama$duplikat   = [];   // laporan duplikat yang dilewati
+
+    $dataDiProses = array_slice($array_barang, 0,$limit);
+
+    foreach ($dataDiProses as $no =>$row) {
+        $rawKodeBarang  = trim((string)($row[3] ?? ''));
+        $parts          = array_map('trim', explode('-',$rawKodeBarang));
+        $cleanKode      = strtoupper(preg_replace('/s+/', '', str_replace('-', '',$rawKodeBarang)));
+
+        // --- CEK DUPLIKAT (lewati, lanjut ke baris berikutnya) ---
+        if (isset($seenKode[$cleanKode])) {$duplikat[] = "Baris data #" . ($no + 1)
+                . " | kode='{$rawKodeBarang}' ||  nama='" . (string)($row[4] ?? '') . "'"
+                . " | sama dengan baris #" . $seenKode[$cleanKode];
+            continue;
+        }
+        $seenKode[$cleanKode] =$no + 1;
+
+        $kodeBarangLama      = mysqli_real_escape_string($conn, (string)($row[0] ?? ''));
+        $namaBarangLama      = mysqli_real_escape_string($conn, (string)($row[1] ?? ''));$deskripsiBarangLama = mysqli_real_escape_string($conn, (string)($row[2] ?? ''));
+        $kodeBarangClean     = mysqli_real_escape_string($conn, $cleanKode);$namaBarang          = mysqli_real_escape_string($conn, (string)($row[4] ?? ''));
+        $deskripsi           = mysqli_real_escape_string($conn, (string)($row[5] ?? ''));$catatan             = mysqli_real_escape_string($conn, (string)($row[26] ?? ''));
+
+        // --- DIGIT 1 - 5 ---
+        $lvl = (count($parts) >= 5) ? $parts : str_split(substr($cleanKode, 0, 5));
+
+        $p0 = isset($lvl[0]) ? $norm($lvl[0]) : null;
+        $p1 = isset($lvl[1]) ? $norm($lvl[1]) : null;
+        $p2 = isset($lvl[2]) ? $norm($lvl[2]) : null;
+        $p3 = isset($lvl[3]) ? $norm($lvl[3]) : null;
+        $p4 = isset($lvl[4]) ? $norm($lvl[4]) : null;
+
+        $kuData                     = ($p0 !== null) ? ($mapKelompokUtama[$p0] ?? null) : null;
+        $kelompokUtamaId            =$kuData['id'] ?? null;
+        $code0                      =$kuData['kode'] ?? '';
+
+        $skuData                    = ($kelompokUtamaId && $p1 !== null) ? ($mapSubKelompokUtama[$kelompokUtamaId][$p1] ?? null) : null;
+        $subKelompokUtamaId         =$skuData['id'] ?? null;
+        $code1                      =$skuData['kode'] ?? '';
+
+        $katData                    = ($subKelompokUtamaId && $p2 !== null) ? ($mapKategori[$subKelompokUtamaId][$p2] ?? null) : null;
+        $kategoriId                 =$katData['id'] ?? null;
+        $code2                      =$katData['kode'] ?? '';
+
+        $sKatData                   = ($kategoriId && $p3 !== null) ? ($mapSubKategori[$kategoriId][$p3] ?? null) : null;
+        $subKategoriId              =$sKatData['id'] ?? null;
+        $code3                      =$sKatData['kode'] ?? '';
+
+        $tSKatData                  = ($subKategoriId && $p4 !== null) ? ($mapTurunanSubKategori[$subKategoriId][$p4] ?? null) : null;
+        $turunanSubKategoriId       =$tSKatData['id'] ?? null;
+        $code4                      =$tSKatData['kode'] ?? '';
+
+        $kode5DigitPlain            =$code0 . $code1 .$code2 . $code3 .$code4;
+        $kode5DigitEscaped          = mysqli_real_escape_string($conn,$kode5DigitPlain);
+
+        // --- DIGIT 6 - 15 ---
+        $candidateKeys = [];
+
+        $acc = '';
+        for ($k = 0; $k < 5; $k++) {
+            if (!isset($lvl[$k])) break;
+            $acc .=$lvl[$k];$candidateKeys[] = $norm($acc);
         }
 
-        // =========================================================================
-        // 3. PROSES DATA
-        // =========================================================================
-        $values     = [];
-        $statMatch  = array_fill(6, 10, 0);   // jumlah baris yang cocok per digit
-        $failSample = [];                     // contoh baris yang gagal
-
-        $dataDiProses = array_slice($array_barang, 0, $limit);
-
-        foreach ($dataDiProses as $row) {
-            $rawKodeBarang = trim((string)($row[3] ?? ''));
-
-            // Pecah kode mentah per "-" dan bersihkan
-            $parts     = array_map('trim', explode('-', $rawKodeBarang));
-            $cleanKode = strtoupper(preg_replace('/\s+/', '', str_replace('-', '', $rawKodeBarang)));
-
-            $kodeBarangLama      = mysqli_real_escape_string($conn, (string)($row[0] ?? ''));
-            $namaBarangLama      = mysqli_real_escape_string($conn, (string)($row[1] ?? ''));
-            $deskripsiBarangLama = mysqli_real_escape_string($conn, (string)($row[2] ?? ''));
-            $kodeBarangClean     = mysqli_real_escape_string($conn, $cleanKode);
-            $namaBarang          = mysqli_real_escape_string($conn, (string)($row[4] ?? ''));
-            $deskripsi           = mysqli_real_escape_string($conn, (string)($row[5] ?? ''));
-            $catatan             = mysqli_real_escape_string($conn, (string)($row[26] ?? ''));
-
-            // --- DIGIT 1 - 5 ---
-            $p0 = isset($parts[0]) ? $norm($parts[0]) : null;
-            $p1 = isset($parts[1]) ? $norm($parts[1]) : null;
-            $p2 = isset($parts[2]) ? $norm($parts[2]) : null;
-            $p3 = isset($parts[3]) ? $norm($parts[3]) : null;
-            $p4 = isset($parts[4]) ? $norm($parts[4]) : null;
-
-            $kuData          = ($p0 !== null) ? ($mapKelompokUtama[$p0] ?? null) : null;
-            $kelompokUtamaId = $kuData['id'] ?? null;
-            $code0           = $kuData['kode'] ?? '';
-
-            $skuData            = ($kelompokUtamaId && $p1 !== null) ? ($mapSubKelompokUtama[$kelompokUtamaId][$p1] ?? null) : null;
-            $subKelompokUtamaId = $skuData['id'] ?? null;
-            $code1              = $skuData['kode'] ?? '';
-
-            $katData    = ($subKelompokUtamaId && $p2 !== null) ? ($mapKategori[$subKelompokUtamaId][$p2] ?? null) : null;
-            $kategoriId = $katData['id'] ?? null;
-            $code2      = $katData['kode'] ?? '';
-
-            $sKatData      = ($kategoriId && $p3 !== null) ? ($mapSubKategori[$kategoriId][$p3] ?? null) : null;
-            $subKategoriId = $sKatData['id'] ?? null;
-            $code3         = $sKatData['kode'] ?? '';
-
-            $tSKatData            = ($subKategoriId && $p4 !== null) ? ($mapTurunanSubKategori[$subKategoriId][$p4] ?? null) : null;
-            $turunanSubKategoriId = $tSKatData['id'] ?? null;
-            $code4                = $tSKatData['kode'] ?? '';
-
-            $kode5DigitPlain   = $code0 . $code1 . $code2 . $code3 . $code4;
-            $kode5DigitEscaped = mysqli_real_escape_string($conn, $kode5DigitPlain);
-
-            // --- DIGIT 6 - 15 ---
-            // Kandidat kunci d5 (semua dicoba sampai ada yang cocok)
-            $candidateKeys = [];
-
-            // a) gabungan bertahap part mentah: "7", "7E", "7E1", "7E100", ...
-            $acc = '';
-            for ($k = 0; $k < 5; $k++) {
-                if (!isset($parts[$k])) break;
-                $acc .= $parts[$k];
-                $candidateKeys[] = $norm($acc);
-            }
-
-            // b) awalan kode bersih: panjang 5 sampai 1
-            for ($len = 5; $len >= 1; $len--) {
-                $candidateKeys[] = substr($cleanKode, 0, $len);
-            }
-
-            // c) hasil lookup level 1-5
-            if ($kode5DigitPlain !== '') {
-                $candidateKeys[] = $norm($kode5DigitPlain);
-            }
-
-            $candidateKeys = array_values(array_unique(array_filter($candidateKeys, function ($v) {
-                return $v !== '';
-            })));
-
-            $adaDash = count($parts) >= 6;
-            $digitIds = [];
-
-            for ($i = 6; $i <= 15; $i++) {
-                $digitIds[$i] = "NULL";
-
-                // Kode digit ke-i: dari part mentah kalau ada tanda "-", kalau tidak potong per 2 karakter
-                if ($adaDash) {
-                    $kodePart = $norm($parts[$i - 1] ?? '');
-                } else {
-                    $kodePart = substr($cleanKode, 5 + ($i - 6) * 2, 2);
-                }
-
-                if ($kodePart === '' || $kodePart === false) continue;
-
-                foreach ($candidateKeys as $key) {
-                    if (isset($mapDigit[$i][$key][$kodePart])) {
-                        $digitIds[$i] = (int)$mapDigit[$i][$key][$kodePart];
-                        $statMatch[$i]++;
-                        break;
-                    }
-                }
-
-                // Simpan contoh kegagalan untuk diagnosa (maks 5)
-                if ($digitIds[$i] === "NULL" && $i === 6 && count($failSample) < 5) {
-                    $failSample[] = "kode='{$rawKodeBarang}' | kodePart digit6='{$kodePart}' | kunci dicoba=[" . implode(', ', $candidateKeys) . "]";
-                }
-            }
-
-            // Formatting FK ID
-            $kuId    = $kelompokUtamaId ?? "NULL";
-            $skuId   = $subKelompokUtamaId ?? "NULL";
-            $katId   = $kategoriId ?? "NULL";
-            $skatId  = $subKategoriId ?? "NULL";
-            $tskatId = $turunanSubKategoriId ?? "NULL";
-
-            $values[] = "("
-                . "'$kodeBarangLama', '$namaBarangLama', '$deskripsiBarangLama', "
-                . "'$kodeBarangClean', '$namaBarang', '$deskripsi', '$catatan', "
-                . "'$kode5DigitEscaped', $kuId, $skuId, $katId, $skatId, $tskatId, "
-                . "{$digitIds[6]}, {$digitIds[7]}, {$digitIds[8]}, {$digitIds[9]}, {$digitIds[10]}, "
-                . "{$digitIds[11]}, {$digitIds[12]}, {$digitIds[13]}, {$digitIds[14]}, {$digitIds[15]}"
-                . ")";
+        for ($len = 5; $len >= 1; $len--) {$candidateKeys[] = substr($cleanKode, 0,$len);
         }
 
-        // =========================================================================
-        // 4. EKSEKUSI MULTI-INSERT
-        // =========================================================================
-        if (!empty($values)) {
-            $insertQuery = "INSERT INTO `barang` (
+        if ($kode5DigitPlain !== '') {$candidateKeys[] = $norm($kode5DigitPlain);
+        }
+
+        $candidateKeys = array_values(array_unique(array_filter($candidateKeys, function ($v) {
+            return $v !== '';
+        })));
+
+        $digitIds = [];
+
+        for ($i = 6; $i <= 15; $i++) {
+            $digitIds[$i] = "NULL";
+
+            // Menentukan posisi indeks array untuk Kode dan Nilai
+            // d6 = row[6] (kode), row[7] (nilai)
+            // d7 = row[8] (kode), row[9] (nilai), dst.
+            $arrayIdxKode  = 6 + (($i - 6) * 2);
+            $arrayIdxNilai =$arrayIdxKode + 1;
+
+            $valKode  = trim((string)($row[$arrayIdxKode] ?? ''));$valNilai = trim((string)($row[$arrayIdxNilai] ?? ''));
+
+            // Jika kode kosong atau "00", lewati
+            if ($valKode === '' || $valKode === '00') {
+                continue;
+            }
+
+            $normKode   =$norm($valKode);$foundId    = null;
+            $primaryKey =$candidateKeys[0] ?? $norm($kode5DigitPlain);
+
+            // 1. Cari di map yang sudah ada
+            foreach ($candidateKeys as$key) {
+                if (isset($mapDigit[$i][$key][$normKode])) {$foundId = (int)$mapDigit[$i][$key][$normKode];
+                    $statMatch[$i]++;
+                    break;
+                }
+            }
+
+            // 2. Jika TIDAK KETEMU, buat baru (Auto-Insert) ke tabel database terkait
+            if ($foundId === null &&$kode5DigitPlain !== '') {
+                $tableName = "digit{$i}";
+                $escD5     = mysqli_real_escape_string($conn,$kode5DigitPlain);
+                $escKode   = mysqli_real_escape_string($conn, $valKode);$escNilai  = mysqli_real_escape_string($conn,$valNilai);
+
+                $queryInsertDigit = "INSERT INTO `{$tableName}` (d5, kode, nilai) VALUES ('{$escD5}', '{$escKode}', '{$escNilai}')";
+                
+                if (mysqli_query($conn,$queryInsertDigit)) {
+                    $foundId = mysqli_insert_id($conn);
+                    
+                    // Update cache mapping lokal di memori agar baris berikutnya tidak insert ulang
+                    $mapDigit[$i][$primaryKey][$normKode] =$foundId;
+                    $statMatch[$i]++;
+                }
+            }
+
+            if ($foundId !== null) {$digitIds[$i] =$foundId;
+            } else if ($i === 6 && count($failSample) < 5) {$failSample[] = "kode='{$rawKodeBarang}' ||  kodePart digit6='{$valKode}' | kunci dicoba=[" . implode(', ', $candidateKeys) . "]";
+            }
+        }
+
+        $kuId    =$kelompokUtamaId ?? "NULL";
+        $skuId   =$subKelompokUtamaId ?? "NULL";
+        $katId   =$kategoriId ?? "NULL";
+        $skatId  =$subKategoriId ?? "NULL";
+        $tskatId =$turunanSubKategoriId ?? "NULL";
+
+        $values[] = "("
+            . "'$kodeBarangLama', '$namaBarangLama', '$deskripsiBarangLama', "
+            . "'$kodeBarangClean', '$namaBarang', '$deskripsi', '$catatan', "
+            . "'$kode5DigitEscaped',$kuId, $skuId,$katId, $skatId,$tskatId, "
+            . "{$digitIds[6]}, {$digitIds[7]}, {$digitIds[8]}, {$digitIds[9]}, {$digitIds[10]}, "
+            . "{$digitIds[11]}, {$digitIds[12]}, {$digitIds[13]}, {$digitIds[14]}, {$digitIds[15]}"
+            . ")";
+    }
+
+    // Mengembalikan hasil olahan lengkap beserta statistik dan sampel gagal untuk dicetak di fungsi masukkanData
+    return [
+        'values'     => $values,
+        'duplikat'   => $duplikat,
+        'dataDiProses' => $dataDiProses,
+        'statMatch'  => $statMatch,
+        'failSample' => $failSample
+    ];
+}
+
+function masukkanData($conn,$hasil_olahan)
+{
+    $values       =$hasil_olahan['values'];
+    $duplikat     =$hasil_olahan['duplikat'];
+    $dataDiProses =$hasil_olahan['dataDiProses'];
+    $statMatch    =$hasil_olahan['statMatch'];
+    $failSample   =$hasil_olahan['failSample'];
+
+    if (!empty($values)) {$insertHead = "INSERT INTO `barang` (
                 kode_barang_lama, nama_barang_lama, deskripsi_barang_lama,
                 kode_barang, nama_barang, deskripsi, catatan, kode_5_digit,
                 kelompok_utama_id, sub_kelompok_utama_id, kategori_id,
                 sub_kategori_id, turunan_sub_kategori_id,
                 digit6_id, digit7_id, digit8_id, digit9_id, digit10_id,
                 digit11_id, digit12_id, digit13_id, digit14_id, digit15_id
-            ) VALUES " . implode(', ', $values);
+            ) VALUES ";
 
-            if (!mysqli_query($conn, $insertQuery)) {
-                throw new Exception("Gagal Insert ke tabel barang: " . mysqli_error($conn));
+        $berhasil  = 0;
+        $errorLain = [];
+
+        foreach (array_chunk($values, 500) as $n =>$chunk) {
+            try {
+                mysqli_query($conn, $insertHead . implode(', ', $chunk));
+                $berhasil += mysqli_affected_rows($conn);
+            } catch (mysqli_sql_exception $e) {
+                $errorLain[] = "Batch #" . ($n + 1) . " (" . count($chunk) . " baris) gagal: " . $e->getMessage();
+                continue; // lanjut ke batch berikutnya
             }
-
-            echo "<b>Berhasil!</b> {$limit} data awal masuk ke tabel <code>barang</code>.<br>";
-
-            // Ringkasan pencocokan digit 6-15
-            echo "<b>Jumlah baris cocok per digit</b> (dari " . count($values) . " baris): ";
-            foreach ($statMatch as $d => $n) {
-                echo "d{$d}={$n} ";
-            }
-            echo "<br>";
-
-            if (!empty($failSample)) {
-                echo "<b>Contoh gagal (digit 6):</b><br>" . implode("<br>", array_map('htmlspecialchars', $failSample)) . "<br>";
-            }
-        } else {
-            echo "<b>Peringatan:</b> Tidak ada data yang di-insert karena array barang kosong.<br>";
         }
 
-        mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1;");
-        return true;
+        echo "<b>Selesai!</b> {$berhasil} dari " . count($dataDiProses) . " baris masuk ke tabel <code>barang</code>.<br>";
 
-    } catch (Exception $e) {
-        mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1;");
-        echo "<b>Error:</b> " . $e->getMessage();
-        return false;
+        if (!empty($duplikat)) {
+            echo "<b>" . count($duplikat) . " baris duplikat dilewati:</b><br>"
+                 . implode("<br>", array_map('htmlspecialchars', array_slice($duplikat, 0, 50)))
+                 . (count($duplikat) > 50 ? "<br>... dan " . (count($duplikat) - 50) . " lainnya" : "")
+                 . "<br>";
+        }
+
+        if (!empty($errorLain)) {
+            echo "<b>Error lain:</b><br>"
+                 . implode("<br>", array_map('htmlspecialchars', $errorLain)) . "<br>";
+        }
+
+        echo "<b>Jumlah baris cocok per digit</b> (dari " . count($values) . " baris unik): ";
+        foreach ($statMatch as $d =>$n) {
+            echo "d{$d}={$n} ";
+        }
+        echo "<br>";
+
+        if (!empty($failSample)) {
+            echo "<b>Contoh gagal (digit 6):</b><br>" . implode("<br>", array_map('htmlspecialchars', $failSample)) . "<br>";
+        }
+    } else {
+        echo "<b>Peringatan:</b> Tidak ada data yang di-insert karena array barang kosong.<br>";
     }
+
+    mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1;");
+    return true;
+}
+
+
+function errorSaatMasukkan($conn)
+{
+	mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1;");
+    echo "<b>Error:</b> " . htmlspecialchars($e->getMessage());
+    return false;
 }
 
 function insertKeTabelBarang($conn, $array_barang, $limit)
+{
+	laporkanError();
+    try {
+		$digit = preloadDigit($conn);
+        kosongkanTable($conn);
+		$hasil_olahan = olahData($conn, $array_barang, $limit, $digit);
+		masukkanData($conn, $hasil_olahan);
+    } catch (Exception $e) {
+        errorSaatMasukkan($conn);
+    }
+}
+
+function insertKeTableBarangNew($conn, $array_barang, $limit)
 {
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -15516,7 +15830,12 @@ function insertKeTabelBarang($conn, $array_barang, $limit)
         // 3. PROSES DATA
         // =========================================================================
         $values     = [];
-        $statMatch  = array_fill(6, 10, 0);
+        $statMatch  = array_fill(6, 10, 0);   // digit terisi (ketemu + dibuat baru)
+        $statBaru   = array_fill(6, 10, 0);   // kode digit yang dibuat baru
+        $statSkip   = array_fill(6, 10, 0);   // tidak dibuat karena digit 1-5 tidak valid
+        $stat00     = array_fill(6, 10, 0);   // kode 00 yang di-skip (tidak dibuat)
+        $statKosong = array_fill(6, 10, 0);   // keterangan kosong, tidak dibuat
+        $errorBaru  = [];                      // error saat membuat kode digit baru
         $failSample = [];
         $seenKode   = [];   // kode_barang bersih => nomor baris pertama
         $duplikat   = [];   // laporan duplikat yang dilewati
@@ -15613,17 +15932,79 @@ function insertKeTabelBarang($conn, $array_barang, $limit)
                     $kodePart = substr($cleanKode, 5 + ($i - 6) * 2, 2);
                 }
 
-                if ($kodePart === '' || $kodePart === false) continue;
+                $adaKodePart = ($kodePart !== '' && $kodePart !== false);
 
-                foreach ($candidateKeys as $key) {
-                    if (isset($mapDigit[$i][$key][$kodePart])) {
-                        $digitIds[$i] = (int)$mapDigit[$i][$key][$kodePart];
-                        $statMatch[$i]++;
-                        break;
+                // (a) CARA ASAL: cari berdasarkan potongan kode barang
+                if ($adaKodePart) {
+                    foreach ($candidateKeys as $key) {
+                        if (isset($mapDigit[$i][$key][$kodePart])) {
+                            $digitIds[$i] = (int)$mapDigit[$i][$key][$kodePart];
+                            $statMatch[$i]++;
+                            break;
+                        }
                     }
                 }
 
-                if ($digitIds[$i] === "NULL" && $i === 6 && count($failSample) < 5) {
+                // (b) TAMBAHAN: kalau belum ketemu, pakai kolom spreadsheet
+                //     kode  = $row[2*i-6]  (D6=index 6, D7=index 8, ... D15=index 24)
+                //     nilai = $row[2*i-5]  (KETERANGAN D6=index 7, D7=index 9, ... D15=index 25)
+                if ($digitIds[$i] === "NULL") {
+                    $kodeSheet  = $norm($row[2 * $i - 6] ?? '');
+                    $nilaiSheet = trim((string)($row[2 * $i - 5] ?? ''));
+
+                    if ($kodeSheet !== '') {
+                        // (b1) cek dulu di cache pakai kode dari sheet, supaya tidak dobel
+                        foreach ($candidateKeys as $key) {
+                            if (isset($mapDigit[$i][$key][$kodeSheet])) {
+                                $digitIds[$i] = (int)$mapDigit[$i][$key][$kodeSheet];
+                                $statMatch[$i]++;
+                                break;
+                            }
+                        }
+
+                        // (b2) masih belum ada -> buat baru
+                        if ($digitIds[$i] === "NULL") {
+                            if (in_array($kodeSheet, ['0', '00'], true)) {
+                                // kode 00 di-skip, tidak dibuat
+                                $stat00[$i]++;
+                            } elseif ($nilaiSheet === '') {
+                                // keterangan kosong -> tidak dibuat, nilai tidak pernah diisi dari kode
+                                $statKosong[$i]++;
+                            } elseif ($turunanSubKategoriId !== null && $kode5DigitPlain !== '') {
+                                $d5Key    = $norm($kode5DigitPlain);
+                                $d5Esc    = mysqli_real_escape_string($conn, $kode5DigitPlain);
+                                $kodeEsc  = mysqli_real_escape_string($conn, $kodeSheet);
+                                $nilaiEsc = mysqli_real_escape_string($conn, $nilaiSheet);
+
+                                $newId = 0;
+                                try {
+                                    mysqli_query(
+                                        $conn,
+                                        "INSERT INTO digit{$i} (d5, kode, nilai) VALUES ('$d5Esc', '$kodeEsc', '$nilaiEsc')"
+                                    );
+                                    $newId = (int)mysqli_insert_id($conn);
+                                    $statBaru[$i]++;
+                                } catch (mysqli_sql_exception $e) {
+                                    if (count($errorBaru) < 20) {
+                                        $errorBaru[] = "digit{$i} d5='{$kode5DigitPlain}' kode='{$kodeSheet}': " . $e->getMessage();
+                                    }
+                                }
+
+                                if ($newId > 0) {
+                                    // simpan ke cache supaya baris berikutnya tidak insert lagi
+                                    $mapDigit[$i][$d5Key][$kodeSheet] = $newId;
+                                    $digitIds[$i] = $newId;
+                                    $statMatch[$i]++;
+                                }
+                            } else {
+                                // digit 1-5 tidak valid, d5 tidak bisa ditentukan
+                                $statSkip[$i]++;
+                            }
+                        }
+                    }
+                }
+
+                if ($digitIds[$i] === "NULL" && $i === 6 && $adaKodePart && count($failSample) < 5) {
                     $failSample[] = "kode='{$rawKodeBarang}' | kodePart digit6='{$kodePart}' | kunci dicoba=[" . implode(', ', $candidateKeys) . "]";
                 }
             }
@@ -15683,11 +16064,46 @@ function insertKeTabelBarang($conn, $array_barang, $limit)
                    . implode("<br>", array_map('htmlspecialchars', $errorLain)) . "<br>";
             }
 
-            echo "<b>Jumlah baris cocok per digit</b> (dari " . count($values) . " baris unik): ";
+            echo "<b>Jumlah baris terisi per digit</b> (dari " . count($values) . " baris unik): ";
             foreach ($statMatch as $d => $n) {
                 echo "d{$d}={$n} ";
             }
             echo "<br>";
+
+            echo "<b>Kode digit baru yang dibuat:</b> ";
+            foreach ($statBaru as $d => $n) {
+                echo "d{$d}={$n} ";
+            }
+            echo "<br>";
+
+            if (array_sum($statSkip) > 0) {
+                echo "<b>Tidak dibuat karena digit 1-5 tidak valid:</b> ";
+                foreach ($statSkip as $d => $n) {
+                    echo "d{$d}={$n} ";
+                }
+                echo "<br>";
+            }
+
+            if (array_sum($stat00) > 0) {
+                echo "<b>Kode 00 di-skip (tidak dibuat):</b> ";
+                foreach ($stat00 as $d => $n) {
+                    echo "d{$d}={$n} ";
+                }
+                echo "<br>";
+            }
+
+            if (array_sum($statKosong) > 0) {
+                echo "<b>Tidak dibuat karena keterangan kosong:</b> ";
+                foreach ($statKosong as $d => $n) {
+                    echo "d{$d}={$n} ";
+                }
+                echo "<br>";
+            }
+
+            if (!empty($errorBaru)) {
+                echo "<b>Gagal membuat kode digit baru:</b><br>"
+                   . implode("<br>", array_map('htmlspecialchars', $errorBaru)) . "<br>";
+            }
 
             if (!empty($failSample)) {
                 echo "<b>Contoh gagal (digit 6):</b><br>" . implode("<br>", array_map('htmlspecialchars', $failSample)) . "<br>";
@@ -15705,12 +16121,6 @@ function insertKeTabelBarang($conn, $array_barang, $limit)
         return false;
     }
 }
-
-// $array_barang = parseTextToCleanArray($raw_text);
-// tampilkanArrayRapi($array_barang);
-// tampilkanDuplikat($array_barang);
-// insertKeTabelBarang($conn, $array_barang, 8000);
-
 
 function parseRawText2($raw)
 {
@@ -15868,8 +16278,15 @@ function updateTabelBarang($conn, $array_barang, $limit)
     }
 }
 
+$array_barang = parseTextToCleanArray($raw_text);
+// tampilkanArrayRapi($array_barang);
+// tampilkanDuplikat($array_barang);
+insertKeTabelBarang($conn, $array_barang, 8000);
+
+
+
 // Pemakaian
-$array_barang2 = parseRawText2($raw_text2);
-updateTabelBarang($conn, $array_barang2, 8000);
+// $array_barang2 = parseRawText2($raw_text2);
+// updateTabelBarang($conn, $array_barang2, 100);
 
 
