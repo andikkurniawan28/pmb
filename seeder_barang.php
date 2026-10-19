@@ -15729,7 +15729,6 @@ function masukkanData($conn,$hasil_olahan)
     return true;
 }
 
-
 function errorSaatMasukkan($conn)
 {
 	mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1;");
